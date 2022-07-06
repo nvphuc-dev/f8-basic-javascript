@@ -4,12 +4,146 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Cơ Bản</title>
+    <title>Javascript Cơ Bản | F8 Official</title>
     <link rel="stylesheet" href="../resource/css/style.css">
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
 <body>
-    
+    <header class="header">
+        <div class="wrp-container">
+            <div class="header__content">
+                <a href="/" class="header__logo"><img src="../resource/images/logo.png" alt="fluid-image"></a>
+                <a href="https://fullstack.edu.vn/" target="_blank" class="badge">Học Lập Trình Để Đi Làm</a>
+            </div>
+        </div>
+    </header>
+    <div class="box-page-title">
+        <div class="wrp-container">
+            <h1 class="hdg-lv1">JAVASCRIPT CƠ BẢN</h1>
+            <div class="box-breadcrumb">
+                <ul class="lst-breadcrumb">
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="#">Lesson 01</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="wrp-container">
+        <div class="box-accordion js-accordion">
+            <div class="box-accordion__item js-accordion-item">
+                <div class="box-accordion__title js-accordion-trigger">Giới thiệu về Javascript</div>
+                <div class="box-accordion__content js-accordion-content">
+                    <h3 class="hdg-lv3">Javascript có thể làm được gì?</h3>
+                    <ul class="lst-dot">
+                        <li>JavaScript là ngôn ngữ lập trình phổ biến nhất thế giới.</li>
+                        <li>JavaScript là ngôn ngữ lập trình của Web.</li>
+                        <li>JavaScript rất dễ học.</li>
+                        <li>Hướng dẫn này sẽ dạy bạn JavaScript từ cơ bản nhất.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box-accordion__item js-accordion-item">
+                <div class="box-accordion__title js-accordion-trigger">Cài đặt môi trường</div>
+                <div class="box-accordion__content js-accordion-content">
+                    <h3 class="hdg-lv3">Cài đặt các công cụ cần thiết:</h3>
+                    <ul class="lst-dot">
+                        <li>Trình duyệt Google Chrome (Mozila Firefox,...)</li>
+                        <li>Visual Studio Code + Live server extension</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box-accordion__item js-accordion-item">
+                <div class="box-accordion__title js-accordion-trigger">Biến trong JavaScript</div>
+                <div class="box-accordion__content js-accordion-content">
+                    <h3 class="hdg-lv3">4 Cách Khai báo Biến JavaScript:</h3>
+                    <ul class="lst-dot">
+                        <li>Sử dụng <span class="txt-danger">var</span></li>
+                        <li>Sử dụng <span class="txt-danger">let</span></li>
+                        <li>Sử dụng <span class="txt-danger">const</span></li>
+                        <li>Không sử dụng gì</li>
+                    </ul>
+                    <div class="box-example">
+                        <p class="box-example__title">Ví dụ</p>
+                        <div class="box-example__inner">
+                            <p><span class="txt-primary">var</span> x = <span class="txt-danger">5</span>;</p>
+                            <p><span class="txt-primary">var</span> y = <span class="txt-danger">6</span>;</p>
+                            <p><span class="txt-primary">var</span> z = x + y;</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-accordion__item js-accordion-item">
+                <div class="box-accordion__title js-accordion-trigger">Toán tử</div>
+                <div class="box-accordion__content js-accordion-content">
+                    <h3 class="hdg-lv3">1. Toán tử số học - Arithmetic:</h3>
+                    <table class="tbl-base">
+                        <tbody>
+                            <tr>
+                                <th>Toán Tử</th>
+                                <th>Mô Tả</th>
+                            </tr>
+                            <tr>
+                                <td>+</td>
+                                <td>Cộng</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>Trừ</td>
+                            </tr>
+                            <tr>
+                                <td>*</td>
+                                <td>Nhân</td>
+                            </tr>
+                            <tr>
+                                <td>**</td>
+                                <td>Lũy thừa</td>
+                            </tr>
+                            <tr>
+                                <td>/</td>
+                                <td>Chia</td>
+                            </tr>
+                            <tr>
+                                <td>%</td>
+                                <td>Chia lấy số dư</td>
+                            </tr>
+                            <tr>
+                                <td>++</td>
+                                <td>Tăng 1 giá trị số</td>
+                            </tr>
+                            <tr>
+                                <td>--</td>
+                                <td>Giảm 1 giá trị số</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="box-example">
+                        <p class="box-example__title">Ví dụ</p>
+                        <div class="box-example__inner">
+                            <p><span class="txt-primary">let</span> a = <span class="txt-danger">4</span>;</p>
+                            <p><span class="txt-primary">let</span> b = <span class="txt-danger">24</span>;</p>
+                            <p><span class="txt-primary">let</span> x = <span class="txt-danger">4</span> + <span class="txt-danger">24</span>; <span class="txt-info">// 28</span></p>
+                            <p><span class="txt-primary">let</span> z = b - a; <span class="txt-info">// 20</span></p>
+                            <p><span class="txt-primary">let</span> e = b * a; <span class="txt-info">// 96</span></p>
+                            <p><span class="txt-primary">let</span> c = b / a; <span class="txt-info">// 6</span></p>
+                            <p><span class="txt-primary">let</span> d = b % a; <span class="txt-info">// 0</span></p>
+                            <p>a++;</span></p>
+                            <p><span class="txt-primary">let</span> h = a; <span class="txt-info">// 5</span></p>
+                            <p>b--;</span></p>
+                            <p><span class="txt-primary">let</span> t = b; <span class="txt-info">// 23</span></p>
+                            <p><span class="txt-primary">let</span> f = 5;</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="wrp-container">
+            <p class="footer__copy">&copy; 2022 - From <a href="https://fullstack.edu.vn/" target="_blank">F8 Official</a>. By Sơn Đặng</p>
+        </div>
+    </footer>
+    <script src="../resource/js/jquery-3.6.0.min.js"></script>
+    <script src="../resource/js/utilities.js"></script>
     <script src="../resource/js/main.js"></script>
 </body>
 </html>

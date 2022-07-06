@@ -86,3 +86,29 @@ console.log(!true);
 console.log(!0);
 */
 
+// 1. Toán tử số học - Aritmetic
+let a = 4;
+let b = 24;
+let x = 4 + 24;
+let z = b - a;
+let e = b * a;
+let c = b / a;
+let d = b % a;
+
+console.log(x);
+console.log(z);
+console.log(e);
+console.log(c);
+console.log(d);
+a++;
+let h = a;
+console.log(h);
+b--;
+let t = b;
+console.log(t);
+let f = 5;
+let k = f ** 2;
+console.log(k);
+let l = Math.pow(f, 2);
+console.log(l);
+
