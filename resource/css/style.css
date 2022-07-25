@@ -362,6 +362,12 @@ a:hover{
     font-size: 16px;
     font-weight: bold;
 }
+.box-example + .hdg-lv3{
+    margin-top: 50px;
+}
+.box-example + p{
+    margin-top: 25px;
+}
 
 .tbl-base{
     border-collapse: collapse;
@@ -400,4 +406,27 @@ a:hover{
     .tbl-base th:first-child{
         width: 35%;
     }
+}
+
+.txt-note{
+    font-size: 14px;
+    line-height: 1.4;
+    color: #666;
+    padding-left: 20px;
+    position: relative;
+    margin-top: 6px;
+}
+.txt-note::before{
+    content: "※";
+    font-size: 14px;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.txt-note + .txt-note{
+    margin-top: 5px;
+}
+.txt-note a{
+    color: #108040;
 }

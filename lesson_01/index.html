@@ -133,6 +133,112 @@
                             <p><span class="txt-primary">let</span> f = 5;</p>
                         </div>
                     </div>
+
+                    <h3 class="hdg-lv3">2. Toán tử ++ --:</h3>
+                    <p class="txt-primary">Prefix (Tiền tố, nó đúng như những gì bạn nghĩ)</p>
+                    <p class="txt-note">Việc 1: + 1 cho a, a = a +1 => a = 5 (trường hợp ++)</p>
+                    <p class="txt-note">Việc 2: Trả về a sau khi được + 1</p>
+                    <div class="box-example">
+                        <p class="box-example__title">Ví dụ (Prefix)</p>
+                        <div class="box-example__inner">
+                            <p><span class="txt-primary">let</span> a = <span class="txt-danger">4</span>;</p>
+                            <p>++a; <span class="txt-info">// 5</span></p>
+                            <p>--a; <span class="txt-info">// 3</span></p>
+                        </div>
+                    </div>
+                    <p class="txt-primary">Postfix (Hậu tố, cách tính toán khác)</p>
+                    <p class="txt-note">Việc 1: copy a ra 1 biến gọi là `a copy`, `a copy` = 4</p>
+                    <p class="txt-note">Việc 2: Trừ 1 của a, a = a - 1 => a = 3</p>
+                    <p class="txt-note">Việc 3: Trả về `a copy`</p>
+                    <p class="txt-note">Tương tự thực hiện cho a++</p>
+                    <div class="box-example">
+                        <p class="box-example__title">Ví dụ (Postfix)</p>
+                        <div class="box-example__inner">
+                            <p><span class="txt-primary">let</span> a = <span class="txt-danger">4</span>;</p>
+                            <p>a++; <span class="txt-info">// 4</span></p>
+                            <p>a--; <span class="txt-info">// 4</span></p>
+                            <p><span class="txt-primary">let</span> number = <span class="txt-danger">6</span>;</p>
+                            <p><span class="txt-primary">let</span> output = <span class="txt-danger">number++</span> * 2 - <span class="txt-danger">--number</span> * 2;</p>
+                            <p>7 * 2 - 7 * 2 => output = 0</p>
+                        </div>
+                    </div>
+
+                    <h3 class="hdg-lv3">3. Toán tử gán:</h3>
+                    <table class="tbl-base">
+                        <tbody>
+                            <tr>
+                                <th>Toán Tử</th>
+                                <th>Ví dụ</th>
+                                <th>Tương dương</th>
+                            </tr>
+                            <tr>
+                                <td>=</td>
+                                <td>x = y</td>
+                                <td>x = y</td>
+                            </tr>
+                            <tr>
+                                <td>+=</td>
+                                <td>x += y</td>
+                                <td>x = x + y</td>
+                            </tr>
+                            <tr>
+                                <td>-=</td>
+                                <td>x -= y</td>
+                                <td>x = x - y</td>
+                            </tr>
+                            <tr>
+                                <td>*=</td>
+                                <td>x *= y</td>
+                                <td>x = x * y</td>
+                            </tr>
+                            <tr>
+                                <td>/=</td>
+                                <td>x /= y</td>
+                                <td>x = x / y</td>
+                            </tr>
+                            <tr>
+                                <td>%=</td>
+                                <td>x %= y</td>
+                                <td>x = x % y</td>
+                            </tr>
+                            <tr>
+                                <td><<=</td>
+                                <td>x <<= y</td>
+                                <td>x = x << y</td>
+                            </tr>
+                            <tr>
+                                <td>>>=</td>
+                                <td>x >>= y</td>
+                                <td>x = x >> y</td>
+                            </tr>
+                            <tr>
+                                <td>>>>=</td>
+                                <td>x >>>= y</td>
+                                <td>x = x >>> y</td>
+                            </tr>
+                            <tr>
+                                <td>&=</td>
+                                <td>x &= y</td>
+                                <td>x = x & y</td>
+                            </tr>
+                            <tr>
+                                <td>^=</td>
+                                <td>x ^= y</td>
+                                <td>x = x ^ y</td>
+                            </tr>
+                            <tr>
+                                <td>|=</td>
+                                <td>x |= y</td>
+                                <td>x = x | y</td>
+                            </tr>
+                            <tr>
+                                <td>**=</td>
+                                <td>x **= y</td>
+                                <td>x = x ** y</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="txt-note">The **= operator is a part of <a href="https://www.w3schools.com/js/js_2016.asp">ECMAScript 2016</a>.</p>
                 </div>
             </div>
         </div>

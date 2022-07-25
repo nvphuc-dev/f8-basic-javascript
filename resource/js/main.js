@@ -87,28 +87,46 @@ console.log(!0);
 */
 
 // 1. Toán tử số học - Aritmetic
-let a = 4;
-let b = 24;
-let x = 4 + 24;
-let z = b - a;
-let e = b * a;
-let c = b / a;
-let d = b % a;
+// let a = 4;
+// let b = 24;
+// let x = 4 + 24;
+// let z = b - a;
+// let e = b * a;
+// let c = b / a;
+// let d = b % a;
+// console.log(x);
+// console.log(z);
+// console.log(e);
+// console.log(c);
+// console.log(d);
+// a++;
+// let h = a;
+// console.log(h);
+// b--;
+// let t = b;
+// console.log(t);
+// let f = 5;
+// let k = f ** 2;
+// console.log(k);
+// let l = Math.pow(f, 2);
+// console.log(l);
 
-console.log(x);
-console.log(z);
-console.log(e);
-console.log(c);
-console.log(d);
-a++;
-let h = a;
-console.log(h);
-b--;
-let t = b;
-console.log(t);
-let f = 5;
-let k = f ** 2;
-console.log(k);
-let l = Math.pow(f, 2);
-console.log(l);
+// 2. Toán tử ++ --
+// Prefix
+// ++a;
+// console.log(a);
+// --a;
+// var output = ++a;
+// console.log('output: ', output);
+
+// Postfix
+// var output = a++;
+// var output = a--;
+// console.log('output: ', output);
+// console.log('a: ', a);
+
+// 3. Toán tử gán
+let a = 1; // vế phải gán cho vế trái
+a = a + 2;
+console.log(a); // yêu cầu cho kết quả a = 3, không thay đổi giá trị ban đầu
 
