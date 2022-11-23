@@ -31,7 +31,7 @@
 	<div class="wrp-container">
 		<div class="box-accordion js-accordion">
 			<div class="box-accordion__item js-accordion-item">
-				<div class="box-accordion__title js-accordion-trigger">Giới thiệu về Javascript</div>
+				<div class="box-accordion__title js-accordion-trigger">Giới thiệu về Javascript (JavaScript Introduction)</div>
 				<div class="box-accordion__content js-accordion-content">
 					<h3 class="hdg-lv3">Javascript có thể làm được gì?</h3>
 					<ul class="lst-dot">
@@ -43,7 +43,7 @@
 				</div>
 			</div>
 			<div class="box-accordion__item js-accordion-item">
-				<div class="box-accordion__title js-accordion-trigger">Cài đặt môi trường</div>
+				<div class="box-accordion__title js-accordion-trigger">Cài đặt môi trường (Environment Settings)</div>
 				<div class="box-accordion__content js-accordion-content">
 					<h3 class="hdg-lv3">Cài đặt các công cụ cần thiết:</h3>
 					<ul class="lst-dot">
@@ -53,7 +53,7 @@
 				</div>
 			</div>
 			<div class="box-accordion__item js-accordion-item">
-				<div class="box-accordion__title js-accordion-trigger">Biến trong JavaScript</div>
+				<div class="box-accordion__title js-accordion-trigger">Biến trong JavaScript (JavaScript Variables)</div>
 				<div class="box-accordion__content js-accordion-content">
 					<h3 class="hdg-lv3">4 Cách Khai báo Biến JavaScript:</h3>
 					<ul class="lst-dot">
@@ -73,9 +73,9 @@
 				</div>
 			</div>
 			<div class="box-accordion__item js-accordion-item">
-				<div class="box-accordion__title js-accordion-trigger">Toán tử</div>
+				<div class="box-accordion__title js-accordion-trigger">Toán tử (JavaScript Operators)</div>
 				<div class="box-accordion__content js-accordion-content">
-					<h3 class="hdg-lv3">1. Toán tử số học - Arithmetic:</h3>
+					<h3 class="hdg-lv3">Toán tử số học - Arithmetic:</h3>
 					<table class="tbl-base">
 						<tbody>
 							<tr>
@@ -126,15 +126,15 @@
 							<p><span class="txt-primary">let</span> e = b * a; <span class="txt-info">// 96</span></p>
 							<p><span class="txt-primary">let</span> c = b / a; <span class="txt-info">// 6</span></p>
 							<p><span class="txt-primary">let</span> d = b % a; <span class="txt-info">// 0</span></p>
-							<p>a++;</span></p>
+							<p>a++;</p>
 							<p><span class="txt-primary">let</span> h = a; <span class="txt-info">// 5</span></p>
-							<p>b--;</span></p>
+							<p>b--;</p>
 							<p><span class="txt-primary">let</span> t = b; <span class="txt-info">// 23</span></p>
 							<p><span class="txt-primary">let</span> f = 5;</p>
 						</div>
 					</div>
 
-					<h3 class="hdg-lv3">2. Toán tử ++ --:</h3>
+					<h3 class="hdg-lv3">Toán tử ++ --:</h3>
 					<p class="txt-primary">Prefix (Tiền tố, nó đúng như những gì bạn nghĩ)</p>
 					<p class="txt-note">Việc 1: + 1 cho a, a = a +1 => a = 5 (trường hợp ++)</p>
 					<p class="txt-note">Việc 2: Trả về a sau khi được + 1</p>
@@ -163,7 +163,7 @@
 						</div>
 					</div>
 
-					<h3 class="hdg-lv3">3. Toán tử gán:</h3>
+					<h3 class="hdg-lv3">Toán tử gán:</h3>
 					<table class="tbl-base">
 						<tbody>
 							<tr>
@@ -239,13 +239,661 @@
 						</tbody>
 					</table>
 					<p class="txt-note">The **= operator is a part of <a href="https://www.w3schools.com/js/js_2016.asp">ECMAScript 2016</a>.</p>
+					<div class="box-example">
+						<p><span class="txt-primary">var</span> a = 1;</p>
+						<p>a = a + 2; // a = 3</p>
+					</div>
+
+					<h3 class="hdg-lv3">Toán tử chuỗi:</h3>
+					<div class="box-example">
+						<p><span class="txt-primary">var</span> firstName = 'Kenvin';</p>
+						<p><span class="txt-primary">var</span> lastName = 'Nguyen';</p>
+						<p>In kết quả lên cùng 1 dòng: "Kenvin Nguyen"</p>
+					</div>
+
+					<h3 class="hdg-lv3">Toán tử so sánh:</h3>
+					<table class="tbl-base">
+						<tbody>
+							<tr>
+								<th>Toán Tử</th>
+								<th>Mô Tả</th>
+							</tr>
+							<tr>
+								<td>==</td>
+								<td>Bằng</td>
+							</tr>
+							<tr>
+								<td>===</td>
+								<td>So sánh giá trị và kiểu dữ liệu</td>
+							</tr>
+							<tr>
+								<td>!=</td>
+								<td>Không bằng</td>
+							</tr>
+							<tr>
+								<td>!==</td>
+								<td>So sánh giá trị và kiểu dữ liệu</td>
+							</tr>
+							<tr>
+								<td>></td>
+								<td>Lớn hơn</td>
+							</tr>
+							<tr>
+								<td><</td>
+								<td>Nhỏ hơn</td>
+							</tr>
+							<tr>
+								<td>>=</td>
+								<td>Lớn hơn hoặc bằng</td>
+							</tr>
+							<tr>
+								<td><=</td>
+								<td>Nhỏ hơn hoặc bằng</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="box-example">
+						<p><span class="txt-primary">var</span> a = 1;</p>
+						<p><span class="txt-primary">var</span> b = 2;</p>
+						<p>a == b; // Sai</p>
+					</div>
+
+					<h3 class="hdg-lv3">Toán tử so sánh và câu lệnh điều kiện:</h3>
+					<div class="box-example">
+						<p><span class="txt-primary">var</span> a = 1;</p>
+						<p><span class="txt-primary">var</span> b = 2;</p>
+						<p><span class="txt-primary">var</span> result = a < b && a > 0; // return true</p>
+					</div>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">Kiểu dữ liệu trong JavaScript (JavaScript Data Types)</div>
+				<div class="box-accordion__content js-accordion-content">
+					<h3 class="hdg-lv3">JavaScript Numbers:</h3>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let </span> x1 = <span class="txt-danger">34.00</span>;</p>
+							<p><span class="txt-primary">let </span> x2 = <span class="txt-danger">65</span>;</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">JavaScript String:</h3>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let </span> carName1 = <span class="txt-danger">"Volvo XC60"</span>;</p>
+							<p><span class="txt-primary">let </span> carName2 = <span class="txt-danger">'Volvo XC60'</span>;</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">JavaScript Booleans:</h3>
+					<p>Booleans chỉ có thể có hai giá trị: <span class="txt-danger">true</span> hoặc <span class="txt-danger">false</span>.</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let </span> x = <span class="txt-danger">5</span>;</p>
+							<p><span class="txt-primary">let </span> y = <span class="txt-danger">5</span>;</p>
+							<p><span class="txt-primary">let </span> z = <span class="txt-danger">6</span>;</p>
+							<p>(x == y) // Return true</p>
+							<p>(x == z) // Return false</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">JavaScript Undefined:</h3>
+					<p>Một biến khai báo nhưng không có giá trị thì sẽ là <span class="txt-danger">undefined</span>.</p>
+					<p>Bất kỳ biến nào cũng có thể được làm trống bằng cách đặt giá trị thành <span class="txt-danger">undefined</span>.</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let </span> car; // Value is undefined, type is undefined</p>
+							<p>car = undefined; // Value is undefined, type is undefined</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">Empty Values (Null):</h3>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let </span> car = ""; // The value is "", the typeof is "string"</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">Symbol:</h3>
+					<p>Có tính chất là duy nhất <span class="txt-danger">unique</span> (ES6).</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let </span> id = <span class="txt-danger">Symbol('id')</span>;</p>
+							<p><span class="txt-primary">let </span> id2 = <span class="txt-danger">Symbol('id')</span>;</p>
+							<p>(id === id2) // Return false</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">Function:</h3>
+					<p>Hàm JavaScript là một khối mã được thiết kế để thực hiện một tác vụ cụ thể.</p>
+					<p>Một hàm JavaScript được thực thi khi "cái gì đó" gọi nó (calls it).</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p class="txt-info">// Function to compute the product of p1 and p2</p>
+							<p><span class="txt-primary">function</span> myFunction(p1, p2) {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-primary">return</span> p1 * p2;</p>
+							<p>}</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">Object types:</h3>
+					<p class="txt-primary">*Object</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let</span> myObject = {</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;name: <span class="txt-danger">'Kenvin Nguyen'</span>,</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;age: 35,</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;address: <span class="txt-danger">'Quang Ngai'</span>,</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;myFunction: function () {</p>
+									<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// something...</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+							<p>};</p>
+						</div>
+					</div>
+					<p class="txt-primary">*Array</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let</span> myArray = [</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-danger">'Javascript'</span>,</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-danger">'PHP'</span>,</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-danger">'Python'</span>,</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-danger">'Ruby'</span></p>
+							<p>];</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">Chuỗi (JavaScript Strings)</div>
+				<div class="box-accordion__content js-accordion-content">
+					<h3 class="hdg-lv3">Cách tạo chuỗi</h3>
+					<p>Chuỗi trong JavaScript dùng để lưu trữ và thao tác với văn bản.</p>
+					<p>Chuỗi trong JavaScript có thể là rỗng hoặc các ký tự được viết bên trong dấu ngoặc kép.</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let </span> fullName = <span class="txt-danger">"Kenvin Nguyen"</span>; // Cách 1 (typeof là string)</p>
+							<p><span class="txt-primary">let </span> fullName2 = <span class="txt-primary">new</span> String(<span class="txt-danger">'Kenvin Nguyen'</span>); // Cách 2 (typeof là object)</p>
+						</div>
+						<p class="txt-note">Nên tạo với cách 1 sẽ nhanh hơn.<br> Kiểu dữ liệu mong muốn là string.</p>
+					</div>
+
+					<h3 class="hdg-lv3">Một số case sử dụng backslash (\) (Escape Character)</h3>
+					<table class="tbl-base">
+						<tbody>
+							<tr>
+								<th>Code</th>
+								<th>Kết Quả</th>
+								<th>Mô Tả</th>
+							</tr>
+							<tr>
+								<td>\'</td>
+								<td>'</td>
+								<td>Dấu nháy đơn</td>
+							</tr>
+							<tr>
+								<td>\"</td>
+								<td>"</td>
+								<td>Dấu nháy kép</td>
+							</tr>
+							<tr>
+								<td>\\</td>
+								<td>\</td>
+								<td>Dấu gạch chéo ngược (Backslash)</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let </span> text = <span class="txt-danger">"Kenvin Nguyen là \"VIP\""</span>;</p>
+							<p><span class="txt-primary">let </span> text2 = <span class="txt-danger">"Đây là dấu backslash \\"</span>;</p>
+						</div>
+						<p class="txt-note">Google: "backslash in javascript"</p>
+					</div>
+
+					<h3 class="hdg-lv3">Xem độ dài chuỗi (String Length)</h3>
+					<p>Để tìm độ dài của một chuỗi, hãy sử dụng thuộc tính <span class="txt-danger">length</span> có sẵn:</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let </span> text = <span class="txt-danger">"Kenvin Nguyen"</span>; // 13</p>
+						</div>
+					</div>
+
+					<h3 class="hdg-lv3">Template string ES6</h3>
+					<p>Văn bản mẫu sử dụng dấu kiểm ngược (``) thay vì dấu ngoặc kép ("") để xác định chuỗi:</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let</span> firstName = <span class="txt-danger">"Kenvin"</span>;</p>
+							<p><span class="txt-primary">let</span> lastName = <span class="txt-danger">"Teresa"</span>;</p>
+							<p><span class="txt-primary">let</span> text = <span class="txt-danger">`Welcome ${firstName}, ${lastName}!`</span>; // Xin chào Kenvin, Teresa!</p>
+						</div>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let</span> price = <span class="txt-danger">10</span>;</p>
+							<p><span class="txt-primary">let</span> VAT = <span class="txt-danger">0.25</span>;</p>
+							<p><span class="txt-primary">let</span> total = <span class="txt-danger">`Tổng: ${(price * (1 + VAT)).toFixed(2)}`</span>; // Tổng: 12.50</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">Làm việc với chuỗi (JavaScript String Methods)</div>
+				<div class="box-accordion__content js-accordion-content">
+					<table class="tbl-base">
+						<tbody>
+							<tr>
+								<td>length</td>
+								<td>trim()</td>
+							</tr>
+							<tr>
+								<td>slice()</td>
+								<td>trimStart()</td>
+							</tr>
+							<tr>
+								<td>substring()</td>
+								<td>trimEnd()</td>
+							</tr>
+							<tr>
+								<td>substr()</td>
+								<td>padStart()</td>
+							</tr>
+							<tr>
+								<td>replace()</td>
+								<td>padEnd()</td>
+							</tr>
+							<tr>
+								<td>replaceAll()</td>
+								<td>charAt()</td>
+							</tr>
+							<tr>
+								<td>toUpperCase()</td>
+								<td>charCodeAt()</td>
+							</tr>
+							<tr>
+								<td>toLowerCase()</td>
+								<td>split()</td>
+							</tr>
+							<tr>
+								<td>concat()</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+					<h3 class="hdg-lv3">Độ dài chuỗi (String Length)</h3>
+					<p>Thuộc tính <span class="txt-danger">length</span> trả về độ dài của một chuỗi:</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let</span> myString = <span class="txt-danger">"Học JS tại F8"</span>;</p>
+							<p>(myString.length) // 13</p>
+						</div>
+					</div>
+					
+					<h3 class="hdg-lv3">Tìm vị trí (Find index)</h3>
+					<p>Thuộc tính <span class="txt-danger">indexOf</span> trả về vị trí tìm thấy:</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let</span> myString = <span class="txt-danger">"Học JS tại F8"</span>;</p>
+							<p>(myString.indexOf('JS')) // 4</p>
+						</div>
+						<p class="txt-note">Nếu không tìm thấy trả về -1 (Dựa vào điều này làm điều kiện tìm thấy hay không.)</p>
+					</div>
+					
+					<h3 class="hdg-lv3">Cắt chuỗi (String slice)</h3>
+					<p>slice() trích xuất một phần của chuỗi và trả về phần được trích xuất trong một chuỗi mới.<br>Phương thức này nhận 2 tham số: vị trí bắt đầu và vị trí kết thúc (không bao gồm kết thúc).</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let</span> myString = <span class="txt-danger">"Học JS tại F8"</span>;</p>
+							<p>(myString.slice(4, 6)) // JS</p>
+						</div>
+					</div>
+
+					<h3 class="hdg-lv3">Thay thế (replace)</h3>
+					<p>Phương thức <span class="txt-danger">replace()</span> thay thế một giá trị đã chỉ định bằng một giá trị khác trong một chuỗi:</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let</span> myString = <span class="txt-danger">"Học JS tại F8"</span>;</p>
+							<p>(myString.replace('JS', 'Javascript')) // Học Javascript tại F8</p>
+						</div>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let</span> myString = <span class="txt-danger">"Học JS tại F8 JS"</span>;</p>
+							<p>(myString.replace(/JS/g, 'Javascript')) // Học Javascript tại F8 Javascript</p>
+						</div>
+						<p class="txt-note">Để thay thế tất cả các kết quả phù hợp, hãy sử dụng biểu thức chính quy có cờ <span class="txt-danger">/g</span> (đối sánh toàn cục):</p>
+					</div>
+
+					<h3 class="hdg-lv3">Convert</h3>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let</span> myString = <span class="txt-danger">"Học JS tại F8"</span>;</p>
+							<p>(myString.toUpperCase()) // HỌC JS TẠI F8</p>
+							<p>(myString.toLowerCase()) // học js tại f8</p>
+						</div>
+					</div>
+
+					<h3 class="hdg-lv3">Trim</h3>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let</span> myString = <span class="txt-danger">"    Học JS tại F8    "</span>;</p>
+							<p>(myString.trim()) // Học JS tại F8</p>
+						</div>
+					</div>
+
+					<h3 class="hdg-lv3">Split</h3>
+					<p>Một chuỗi có thể được chuyển đổi thành một mảng bằng phương thức <span class="txt-danger">split()</span>:</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let</span> languages = <span class="txt-danger">"Javascript, PHP, Ruby"</span>;</p>
+							<p>(languages.split(', ')) // array [Javascript, PHP, Ruby]</p>
+						</div>
+					</div>
+
+					<h3 class="hdg-lv3">Get character by index</h3>
+					<p>Phương thức <span class="txt-danger">charAt()</span> trả về ký tự tại một chỉ mục (vị trí) được chỉ định trong một chuỗi::</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let</span> languages = <span class="txt-danger">"Javascript"</span>;</p>
+							<p>(languages.charAt(0)) // J</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">Làm việc với số (JavaScript Numbers)</div>
+				<div class="box-accordion__content js-accordion-content">
+					<h3 class="hdg-lv3">Tạo giá trị Number</h3>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let</span> age = <span class="txt-danger">18</span>;</p>
+							<p><span class="txt-primary">const</span> PI = <span class="txt-danger">3.1415926535</span>;</p>
+							<p><span class="txt-primary">let</span> otherNumber = <span class="txt-primary">new</span> Number(9);</p>
+							<p><span class="txt-primary">let</span> result = <span class="txt-danger">20 / 'abc'</span>; // NaN</p>
+							<p>(isNaN(result)); // true</p>
+						</div>
+						<p class="txt-note">Bạn có thể sử dụng hàm JavaScript toàn cục <span class="txt-danger">isNaN()</span> để tìm hiểu xem một giá trị có phải là số không.</p>
+					</div>
+
+					<h3 class="hdg-lv3">Phương thức (JavaScript Number Methods)</h3>
+					<table class="tbl-base">
+						<tbody>
+							<tr>
+								<th>Phương Thức</th>
+								<th>Mô Tả</th>
+							</tr>
+							<tr>
+								<td>toString()</td>
+								<td>Trả về một số dưới dạng chuỗi</td>
+							</tr>
+							<tr>
+								<td>toExponetial()</td>
+								<td>Trả về một số được viết bằng ký hiệu hàm mũ</td>
+							</tr>
+							<tr>
+								<td>toFixed()</td>
+								<td>Trả về một số được viết với một số thập phân</td>
+							</tr>
+							<tr>
+								<td>toPrecision()</td>
+								<td>Trả về một số được viết với độ dài xác định</td>
+							</tr>
+							<tr>
+								<td>ValueOf()</td>
+								<td>Trả về một số dưới dạng một số</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let</span> age = <span class="txt-danger">18</span>;</p>
+							<p><span class="txt-primary">const</span> PI = <span class="txt-danger">3.1415926535</span>;</p>
+							<p>(age.toString()); // 18 (typeof là string)</p>
+							<p>(PI.toFixed(2)); // 3.14 (typeof là string)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">Mảng (JavaScript Arrays)</div>
+				<div class="box-accordion__content js-accordion-content">
+					<h3 class="hdg-lv3">Tạo mảng</h3>
+					<p>Mảng là một biến đặc biệt, có thể chứa nhiều hơn một giá trị:</p>
+					<div class="box-syntax">
+						<p class="box-syntax__title">Syntax:</p>
+						<div class="box-syntax__content">
+							<p><span class="txt-primary">const</span> array_name = [item1, item2, ...];</p>
+						</div>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">const</span> cars = [<span class="txt-danger">"Saab", "Volvo", "BMW"</span>];</p>
+							<p><span class="txt-primary">const</span> cars = <span class="txt-primary">new</span> Array(<span class="txt-danger">"Saab", "Volvo", "BMW"</span>);</p>
+						</div>
+						<p class="txt-note">Mảng có thể chứa tất cả các loại dữ liệu.</p>
+					</div>
+
+					<h3 class="hdg-lv3">Truy xuất mảng</h3>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">const</span> cars = [<span class="txt-danger">"Saab", "Volvo", "BMW"</span>];</p>
+							<p>(cars.length); // 3 (độ dài mảng)</p>
+							<p>(cars[0]); // Saab (lấy phần tử theo index)</p>
+						</div>
+					</div>
+
+					<h3 class="hdg-lv3">Cách nhận biết một mảng</h3>
+					<p>Vấn đề là toán tử JavaScript typeof trả về "object":</p>
+					<div class="box-example">
+						<p class="box-example__title">Giải pháp 1: Để giải quyết vấn đề này, ECMAScript 5 (JavaScript 2009) đã định nghĩa một phương thức mới <span class="txt-danger">Array.isArray()</span></p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">const</span> cars = [<span class="txt-danger">"Saab", "Volvo", "BMW"</span>];</p>
+							<p><span class="txt-primary">let</span> type = <span class="txt-primary">typeof</span> cars;</p>
+							<p>(Array.isArray(cars));</p>
+						</div>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Giải pháp 2: Toán tử <span class="txt-danger">instanceof</span> trả về true nếu một đối tượng được tạo bởi một hàm tạo đã cho</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">const</span> cars = [<span class="txt-danger">"Saab", "Volvo", "BMW"</span>];</p>
+							<p>(cars <span class="txt-danger">instanceof</span> Array);</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">Làm việc với mảng (JavaScript Arrays Methods)</div>
+				<div class="box-accordion__content js-accordion-content">
+					<h3 class="hdg-lv3">Chuyển đổi mảng thành chuỗi</h3>
+					<p>Phương thức <span class="txt-danger">toString()</span> chuyển đổi một mảng thành một chuỗi các giá trị mảng (được phân tách bằng dấu phẩy).</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">const</span> cars = [<span class="txt-danger">"Saab", "Volvo", "BMW"</span>];</p>
+							<p>(cars.toString()); // Saab,Volvo,BMW</p>
+							<p>(cars.join(', ')); // Saab, Volvo, BMW</p>
+						</div>
+					</div>
+
+					<h3 class="hdg-lv3">JavaScript Array pop()</h3>
+					<p>Phương thức <span class="txt-danger">pop()</span> xóa bỏ phần tử cuối cùng khỏi một mảng và trả lại phần tử đã xóa</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">const</span> cars = [<span class="txt-danger">"Saab", "Volvo", "BMW"</span>];</p>
+							<p>(cars.pop()); // [BMW]</p>
+						</div>
+						<p class="txt-note">Xóa đến cuối cùng xóa tiếp trả về <span class="txt-danger">undefined</span></p>
+					</div>
+
+					<h3 class="hdg-lv3">JavaScript Array push()</h3>
+					<p>Phương thức <span class="txt-danger">push()</span> thêm 1 hay nhiều phần tử vào cuối mảng và trả về độ dài mới của mảng.</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">const</span> cars = [<span class="txt-danger">"Saab", "Volvo", "BMW"</span>];</p>
+							<p>(cars.push('Toyota', 'Honda')); // [Saab, Volvo, BMW, Toyota, Honda]</p>
+						</div>
+					</div>
+
+					<h3 class="hdg-lv3">JavaScript Array shift()</h3>
+					<p>Phương thức <span class="txt-danger">shift()</span> xóa bỏ phần tử đầu tiên khỏi một mảng và trả lại phần tử đã xóa</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">const</span> cars = [<span class="txt-danger">"Saab", "Volvo", "BMW"</span>];</p>
+							<p>(cars.shift()); // [Saab]</p>
+						</div>
+						<p class="txt-note">Xóa đến cuối cùng xóa tiếp trả về <span class="txt-danger">undefined</span></p>
+					</div>
+
+					<h3 class="hdg-lv3">JavaScript Array unshift()</h3>
+					<p>Phương thức <span class="txt-danger">unshift()</span> thêm 1 hay nhiều phần tử vào đầu mảng và trả về độ dài mới của mảng.</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">const</span> cars = [<span class="txt-danger">"Saab", "Volvo", "BMW"</span>];</p>
+							<p>(cars.unshift('Toyota', 'Honda')); // [Toyota, Honda, Saab, Volvo, BMW]</p>
+						</div>
+					</div>
+
+					<h3 class="hdg-lv3">JavaScript Array splice()</h3>
+					<p>Phương thức <span class="txt-danger">splice()</span> thêm các phần tử mới vào một mảng.</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">const</span> cars = [<span class="txt-danger">"Saab", "Volvo", "BMW"</span>];</p>
+							<p>(cars.splice(1, 0, 'Toyota', 'Honda')); // [Saab, Toyota, Honda, Volvo, BMW]</p>
+						</div>
+						<p class="txt-note">Tham số đầu tiên (1) xác định vị trí mà các phần tử mới sẽ được thêm vào (spliced in).<br>Tham số thứ hai (0) xác định số lượng phần tử sẽ bị xóa.<br>Các tham số còn lại ("Toyota" , "Honda") xác định các phần tử mới sẽ được thêm vào.<br>Phương thức splice() trả về một mảng với các mục đã bị xóa</p>
+					</div>
+
+					<h3 class="hdg-lv3">JavaScript Array slice()</h3>
+					<p>Phương thức <span class="txt-danger">slice()</span> cắt một phần của mảng thành một mảng mới.</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">const</span> cars = [<span class="txt-danger">"Saab", "Volvo", "BMW"</span>];</p>
+							<p>(cars2 = cars.slice(1)); // [Volvo, BMW]</p>
+						</div>
+						<p class="txt-note">Phương thức <span class="txt-danger">slice()</span> tạo một mảng mới.<br>Phương thức <span class="txt-danger">slice()</span> không xóa bất kỳ phần tử nào khỏi mảng nguồn.</p>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">const</span> fruits = [<span class="txt-danger">"Banana", "Orange", "Lemon", "Apple", "Mango"</span>];</p>
+							<p><span class="txt-primary">const</span> citrus = fruits.slice(1,3);</p>
+							<p>(citrus); // [Orange, Lemon]</p>
+						</div>
+						<p class="txt-note">Phương thức <span class="txt-danger">slice()</span> có thể nhận hai đối số như slice(1, 3).<br>Sau đó, phương thức chọn các phần tử từ đối số bắt đầu và tối đa (nhưng không bao gồm) đối số kết thúc.</p>
+					</div>
+
+					<h3 class="hdg-lv3">Merging (Concatenating) Arrays</h3>
+					<p>Phương thức <span class="txt-danger">concat()</span> hợp nhất các mảng lại với nhau.</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">const</span> myGirls = [<span class="txt-danger">"Cecilie", "Lone"</span>];</p>
+							<p><span class="txt-primary">const</span> myBoys = [<span class="txt-danger">"Emil", "Tobias", "Linus"</span>];</p>
+							<p><span class="txt-primary">const</span> others = [<span class="txt-danger">"Kenvin", "Teresa"</span>];</p>
+							<p>(myChildren = myGirls.concat(myBoys)); // [Cecilie, Lone, Emil, Tobias, Linus]</p>
+							<p>(myFamily = myGirls.concat(myBoys, others)); // [Cecilie, Lone, Emil, Tobias, Linus, Kenvin, Teresa]</p>
+						</div>
+						<p class="txt-note">Phương thức <span class="txt-danger">concat()</span> không thay đổi các mảng hiện có. Nó luôn trả về một mảng mới.</p>
+						<p class="txt-note">Phương thức <span class="txt-danger">concat()</span> có thể nhận nhiều đối số.</p>
+					</div>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">Hàm (JavaScript Functions)</div>
+				<div class="box-accordion__content js-accordion-content">
+					<p>Hàm JavaScript là một khối mã được thiết kế để thực hiện một tác vụ cụ thể.</p>
+					<p>Một hàm JavaScript được thực thi khi "cái gì đó" gọi nó (calls it).</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p class="txt-info">// Hàm tính tích của p1 và p2</p>
+								<p><span class="txt-primary">function</span> myFunction(p1, p2) {</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-primary">return</span> p1 * p2;</p>
+							<p>}</p>
+						</div>
+					</div>
+
+					<h3 class="hdg-lv3">Cú pháp hàm trong Javascript</h3>
+					<div class="box-syntax">
+						<p class="box-syntax__title">Syntax:</p>
+						<div class="box-syntax__content">
+							<p><span class="txt-primary">function</span> function_name(parameter1, parameter2, parameter3) { </p>
+								<p class="txt-info">&nbsp;&nbsp;&nbsp;&nbsp;// mã được thực thi</p>
+							<p>}</p>
+						</div>
+					</div>
+
+					<h3 class="hdg-lv3">Tham số trong hàm (parameter)</h3>
+					<p>Các tham số của hàm được liệt kê bên trong dấu ngoặc đơn () trong định nghĩa hàm.</p>
+					<p>Các đối số của hàm là các giá trị mà hàm nhận được khi nó được gọi.</p>
+					<p>Bên trong hàm, các đối số (các tham số) hoạt động như các biến cục bộ.</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p class="txt-info">// Tính tích 2 số và trả kết quả</p>
+							<p><span class="txt-primary">function</span> myFunction(a, b) {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-primary">return</span> a * b; <span class="txt-info">// Hàm trả về tích của a và b</span></p>
+							<p>}</p>
+							<p><span class="txt-primary">let</span> x = myFunction(4, 3); <span class="txt-info">// Gọi được hàm tính tích 2 số, giá trị trả về sẽ gán cho x = 12</span></p>
+						</div>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">function</span> writeLog() {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-primary">for</span>(<span class="txt-primary">let</span> param <span class="txt-primary">of arguments</span>) {</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(param);</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+							<p>}</p>
+							<p>(writeLog('Log 1', 'Log 2', 'Log 3');) // Log 1 \n Log 2 \n Log 3</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">★★★</div>
+				<div class="box-accordion__content js-accordion-content">
+					<h3 class="hdg-lv3">★★★</h3>
+					<p>★★★</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>★★★</p>
+						</div>
+						<p class="txt-note">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+					</div>
+					<div class="box-syntax">
+						<p class="box-syntax__title">Syntax:</p>
+						<div class="box-syntax__content">
+							<p><span class="txt-primary">const</span> array_name = [item1, item2, ...];</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<footer class="footer">
 		<div class="wrp-container">
-			<p class="footer__copy">&copy; 2022 - From <a href="https://fullstack.edu.vn/" target="_blank">F8 Official</a>. By Sơn Đặng</p>
+			<p class="footer__copy">&copy; 2022 - From <a href="https://www.youtube.com/@F8VNOfficial" target="_blank">F8 Official</a>. By Sơn Đặng</p>
 		</div>
 	</footer>
 	<script src="../resource/js/jquery-3.6.0.min.js"></script>

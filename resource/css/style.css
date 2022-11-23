@@ -92,13 +92,13 @@ meter {
 html{
 	height: 100%;
 	font-size: 100%;
-	line-height: 1.4;
+	line-height: 1.5;
 }
 body{
 	font-size: 16px;
 	background: #f9f9f9;
 	color: #333;
-	line-height: 1.4;
+	line-height: 1.5;
 	letter-spacing: 0.08em;
 	height: 100%;
 	overflow-x: hidden;
@@ -134,7 +134,7 @@ a:hover{
 	color: #0000cd;
 }
 .txt-info{
-	color: #108040;
+	color: #008000;
 }
 
 /* Header */
@@ -429,4 +429,23 @@ a:hover{
 }
 .txt-note a{
 	color: #108040;
+}
+.box-syntax + .hdg-lv3,
+.tbl-base + .hdg-lv3,
+.txt-note + .hdg-lv3{
+	margin-top: 50px;
+}
+
+.box-syntax{
+	margin-top: 25px;
+}
+.box-syntax__title{
+	font-size: 16px;
+	color: #111;
+}
+.box-syntax__content{
+	padding: 20px;
+	margin-top: 15px;
+	border: solid 1px #999;
+	border-radius: 4px;
 }
