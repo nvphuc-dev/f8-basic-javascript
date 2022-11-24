@@ -419,12 +419,59 @@ console.log(!0);
 // writeLog('Xin chào bạn!');
 
 // Arguments - Sẽ nhận các đối số truyền vào cho hàm mà không cần gắng tham số hàm
-function writeLog() {
-	// console.log(arguments);
-	let myString = '';
-	for(let param of arguments) {
-		myString += `${param} - `;
-	}
-	console.log(myString);
-}
-writeLog('Log 1', 'Log 2', 'Log 3');
+// function writeLog() {
+// 	// console.log(arguments);
+// 	let myString = '';
+// 	for(let param of arguments) {
+// 		myString += `${param} - `;
+// 	}
+// 	console.log(myString);
+// }
+// writeLog('Log 1', 'Log 2', 'Log 3');
+
+/* -----------------------------------------------
+ Object
+-------------------------------------------------- */
+// let myInfo = {
+// 	'name': 'Kenvin Nguyen',
+// 	'age': 25,
+// 	'email': 'kenvin@gmail.com',
+// 	'address': 'HCM VN'
+// };
+// //myInfo.sex = 'Nam'; // myInfo['sex'] = 'Nam';
+// // delete myInfo.address;
+// console.log(myInfo);
+
+// object contructor
+// Quy ước đặt tên cho contructor là viết hoa chữ cái đầu.
+
+// function User(firstName, lastName, avatar) { // Function declartion
+// let User = function(firstName, lastName, avatar) { // Function expression
+// 	this.firstName = firstName;
+// 	this.lastName = lastName;
+// 	this.avatar = avatar;
+// 	this.getName = function() {
+// 		return `${this.firstName} ${this.lastName}`;
+// 	}
+// }
+// let author = new User('Kenvin', 'Nguyen', 'avatar.jpg');
+// let user = new User('Teresa', 'Teng', 'avatar.jpg');
+// thêm thuộc tính/phương thức riêng
+// author.title = 'Bang Chủ Cái Bang';
+// user.comment = 'I love BCCB!';
+// console.log(author);
+// console.log(user);
+// console.log(author.getName());
+// console.log(user.getName());
+
+// object prototype
+// User.prototype.className = 'F8';
+// console.log(author.className);
+// console.log(user.className);
+
+/* -----------------------------------------------
+ Date
+-------------------------------------------------- */
+let d = new Date();
+// console.log(d);
+console.log(d.getFullYear());

@@ -849,16 +849,6 @@
 					<div class="box-example">
 						<p class="box-example__title">Ví dụ</p>
 						<div class="box-example__inner">
-							<p class="txt-info">// Tính tích 2 số và trả kết quả</p>
-							<p><span class="txt-primary">function</span> myFunction(a, b) {</p>
-							<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-primary">return</span> a * b; <span class="txt-info">// Hàm trả về tích của a và b</span></p>
-							<p>}</p>
-							<p><span class="txt-primary">let</span> x = myFunction(4, 3); <span class="txt-info">// Gọi được hàm tính tích 2 số, giá trị trả về sẽ gán cho x = 12</span></p>
-						</div>
-					</div>
-					<div class="box-example">
-						<p class="box-example__title">Ví dụ</p>
-						<div class="box-example__inner">
 							<p><span class="txt-primary">function</span> writeLog() {</p>
 							<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-primary">for</span>(<span class="txt-primary">let</span> param <span class="txt-primary">of arguments</span>) {</p>
 								<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(param);</p>
@@ -866,6 +856,163 @@
 							<p>}</p>
 							<p>(writeLog('Log 1', 'Log 2', 'Log 3');) // Log 1 \n Log 2 \n Log 3</p>
 						</div>
+					</div>
+
+					<h3 class="hdg-lv3">Return trong function (Function Return)</h3>
+					<p>Khi JavaScript đạt đến câu lệnh trả về, hàm sẽ ngừng thực thi.</p>
+					<p>Nếu hàm được gọi từ một câu lệnh, JavaScript sẽ "quay lại" để thực thi mã sau câu lệnh gọi.</p>
+					<p>Các hàm thường tính toán một giá trị trả về. Giá trị trả về được "trả lại" cho "người gọi.</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p class="txt-info">// Tính tích 2 số và trả kết quả</p>
+							<p><span class="txt-primary">function</span> myFunction(a, b) {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-primary">return</span> a * b; <span class="txt-info">// Hàm trả về tích của a và b</span></p>
+							<p>}</p>
+							<p><span class="txt-primary">let</span> x = myFunction(4, 3); <span class="txt-info">// Gọi được hàm tính tích 2 số, giá trị trả về cho người gọi x = 12</span></p>
+						</div>
+					</div>
+					<p class="txt-note">Return có thể trả về bất kỳ kiểu dữ liệu nào.</p>
+					<p class="txt-note">Function đặt trùng tên thì function sau ghi đè lên function trước.</p>
+					<p class="txt-note">Biến trong function chỉ chạy trong phạm vi function đó.</p>
+					<p class="txt-note">Function có thể chứa function khác.</p>
+					<p class="txt-note">Nếu function không <span class="txt-primary">return</span> thì sẽ trả về <span class="txt-danger">undefined</span>.</p>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">Các loại Function</div>
+				<div class="box-accordion__content js-accordion-content">
+					<h3 class="hdg-lv3">Function declartion</h3>
+					<p>Khi bạn tạo ra một <span class="txt-primary">function</span> có tên, đó gọi là <span class="txt-primary">function declaration</span></p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">function</span> handleClick() {</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;console.log("clicked")</p>
+							<p>}</p>
+						</div>
+						<p class="txt-note">Hàm có thể gọi trước hoặc sau khi được định nghĩa.</p>
+					</div>
+
+					<h3 class="hdg-lv3">Function expression</h3>
+					<p>Cách khai báo khác với <span class="txt-primary">function declaration</span></p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-danger">const</span><span class="txt-primary"> handleClick = function()</span> {</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;console.log("clicked")</p>
+							<p>}</p><br>
+							<p class="txt-info">// Cú pháp với ES6 cũng là function expression</p>
+							<p><span class="txt-danger">const</span><span class="txt-primary"> handleClick = () =></span> {</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;console.log("clicked")</p>
+							<p>}</p>
+						</div>
+						<p class="txt-note">Hàm chỉ gọi thực thi sau khi được định nghĩa.</p>
+					</div>
+
+					<p class="txt-note">Chúng ta sử dụng <span class="txt-primary">function declaration</span> khi muốn tạo ra <span class="txt-primary">function</span> để sử dụng ở bất cứ đâu trong toàn bộ mã code và sử dụng <span class="txt-primary">function expression</span> khi <span class="txt-primary">function</span> bị giới hạn vùng sử dụng, giúp global scope nhẹ và sạch hơn.</p>
+
+					<h3 class="hdg-lv3">Hoisting</h3>
+					<p>Khái niệm <span class="txt-danger">hoisting</span> biểu thị <span class="txt-primary">function</span> hay biến có thể được "gọi" ngay từ dòng code đầu tiên, trước khi chúng được khai báo.</p>
+					<p><span class="txt-primary">Function Declaration</span> có thuộc tính <span class="txt-danger">hoisting</span> còn <span class="txt-primary">Function Expression</span> thì không.</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>handleStuff();</p>
+							<br>
+							<p><span class="txt-primary">function</span> handleStuff() {</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-info">// do stuff</span></p>
+							<p>}</p>
+						</div>
+						<p class="txt-note">Đoạn code dưới đây sẽ thực thi bình thường khi Function Declaration.</p>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>handleStuff();</p>
+							<br>
+							<p><span class="txt-danger">const</span> handleStuff = <span class="txt-primary">function</span>() {</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-info">// do stuff</span></p>
+							<p>}</p>
+						</div>
+						<p class="txt-note">Đối với Function Expression thì sẽ báo lỗi.</p>
+					</div>
+
+					<h3 class="hdg-lv3">Arrow function</h3>
+					<p>Arrow function là 1 feature của CoffeeScript, giúp việc định nghĩa function trở nên ngắn gọn hơn (từ phiên bản ES6).</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let</span> helloWorld = () => { console.log(‘Hello World’) }</p>
+
+							<p>hello = (val) => "Hello " + val; <span class="txt-info">// với các tham số</span></p>
+						</div>
+						<p class="txt-note">Nếu funtion không chỉ có 1 dòng code, chúng ta có thể bỏ {}<br>let HelloWorld = () => console.log('Hello World')</p>
+						<p class="txt-note">Nếu function chỉ có return statement:<br>let helloWorld = () => "Hello World";</p>
+						<p class="txt-note">Với function chỉ có 1 parameter, chúng ta có thẻ bỏ ()<br>let hello = name => console.log(Hello ${name})</p>
+					</div>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">JavaScript Objects</div>
+				<div class="box-accordion__content js-accordion-content">
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">const</span> person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};</p>
+						</div>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">const</span> person = {</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;firstName: "John",</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;lastName : "Doe",</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;id       : 5566,</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;fullName : function() {</p>
+									<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return this.firstName + " " + this.lastName;</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+							<p>};</p>
+							<p>(person.fullName); // John Doe</p>
+						</div>
+					</div>
+
+					<h3 class="hdg-lv3">Xây dựng đối tượng (Object contructor)</h3>
+					<div class="box-syntax">
+						<p class="box-syntax__title">Syntax:</p>
+						<div class="box-syntax__content">
+							<p><span class="txt-primary">function</span> Contructor_name(parameter1, parameter2, parameter3) {</p>
+							<p>}</p>
+						</div>
+						<p class="txt-note">Quy ước chung: nên viết hoa các chữ cái đầu của tên ObjectContructor.</p>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">function</span> User(firstName, lastName, avatar) {</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;this.firstName = firstName;</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;this.lastName = lastName;</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;this.avatar = avatar;</p>
+							<p>}</p><br>
+							<p><span class="txt-primary">let</span> author = <span class="txt-primary">new</span> User('Kenvin', 'Nguyen', 'avatar.jpg');</p>
+							<p>(author); <span class="txt-info">// {firstName: 'Kenvin', lastName: 'Nguyen', avatar: 'avatar.jpg'}</span></p>
+						</div>
+					</div>
+
+					<h3 class="hdg-lv3">Đối tượng nguyên mẫu (Object prototype)</h3>
+					<p>Có thể thêm thuộc tính/phương thức qua prototype sau khi hàm tạo được tạo ra.</p>
+					<p>author.title = 'Bang Chủ Cái Bang'; // title sẽ được thêm cho User contructor</p>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">Date</div>
+				<div class="box-accordion__content js-accordion-content">
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">const</span> d = <span class="txt-primary">new</span> Date();</p>
+						</div>
+						<p class="txt-note">Thu Nov 24 2022 15:52:55 GMT+0700 (Indochina Time)</p>
 					</div>
 				</div>
 			</div>

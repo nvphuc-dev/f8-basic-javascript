@@ -23,7 +23,7 @@ Kiểm tra kiểu dữ liệu ta dùng "typeof" // console.log(typeof a);
  /* -----------------------------------------------
  Logs:
  -------------------------------------------------- */
- https://www.youtube.com/watch?v=jE6UPl17Nvo&list=PL_-VfJajZj0VgpFpEVFzS5Z-lkXtBe-x5&index=26 Done
+ https://www.youtube.com/watch?v=jE6UPl17Nvo&list=PL_-VfJajZj0VgpFpEVFzS5Z-lkXtBe-x5&index=34 Done
  
  
  
