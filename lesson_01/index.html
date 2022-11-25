@@ -1017,10 +1017,120 @@
 				</div>
 			</div>
 			<div class="box-accordion__item js-accordion-item">
-				<div class="box-accordion__title js-accordion-trigger">★★★</div>
+				<div class="box-accordion__title js-accordion-trigger">Lệnh rẽ nhánh If, Else</div>
 				<div class="box-accordion__content js-accordion-content">
-					<h3 class="hdg-lv3">★★★</h3>
-					<p>★★★</p>
+					<p>Câu lệnh điều kiện được sử dụng để thực hiện các hành động khác nhau dựa trên các điều kiện khác nhau.</p>
+					<h3 class="hdg-lv3">Câu lệnh if</h3>
+					<div class="box-syntax">
+						<p class="box-syntax__title">Syntax:</p>
+						<div class="box-syntax__content">
+							<p><span class="txt-primary">if</span> (condition) {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-info">//  block of code to be executed if the condition is true</span></p>
+							<p>}</p>
+						</div>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">if</span> (hour < 18) {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;greeting = "Good day";</p>
+							<p>}</p><br>
+							<p>Kết quả của lời chào sẽ là: Good day</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">Câu lệnh if, else</h3>
+					<div class="box-syntax">
+						<p class="box-syntax__title">Syntax:</p>
+						<div class="box-syntax__content">
+							<p><span class="txt-primary">if</span> (condition) {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-info">//  block of code to be executed if the condition is true</span></p>
+							<p>} <span class="txt-primary">else {</span></p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-info">//  block of code to be executed if the condition is true</span></p>
+							<p>}</p>
+						</div>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">if</span> (hour < 18) {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;greeting = "Good day";</p>
+							<p>} <span class="txt-primary">else</span> { </p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;greeting = "Good evening";</p>
+							<p>}</p>
+							<br>
+							<p>Kết quả của lời chào sẽ là: Good day</p>
+						</div>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">if</span> (time < 10) {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;greeting = "Good morning";</p>
+							<p>} <span class="txt-primary">else if</span>(time < 20) { </p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;greeting = "Good day";</p>
+							<p>} <span class="txt-primary">else</span> {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;greeting = "Good evening";</p>
+							<p>}</p>
+							<br>
+							<p>Kết quả của lời chào sẽ là: Good day</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">Lệnh rẽ nhánh Switch</div>
+				<div class="box-accordion__content js-accordion-content">
+					<p>Câu lệnh chuyển đổi được sử dụng để thực hiện các hành động khác nhau dựa trên các điều kiện khác nhau.</p>
+					<div class="box-syntax">
+						<p class="box-syntax__title">Syntax:</p>
+						<div class="box-syntax__content">
+							<p><span class="txt-primary">switch</span>(expression) {</p>
+								<p><span class="txt-primary">case</span> x:</p>
+									<p>&nbsp;&nbsp;&nbsp;&nbsp;// code block</p>
+									<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-primary">break</span>;</p>
+								<p><span class="txt-primary">case</span> y:</p>
+									<p>&nbsp;&nbsp;&nbsp;&nbsp;// code block</p>
+									<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-primary">break</span>;</p>
+								<p><span class="txt-primary">default</span>:</p>
+									<p>&nbsp;&nbsp;&nbsp;&nbsp;// code block</p>
+							<p>}</p>
+						</div>
+					</div>
+					<p class="txt-note">Dùng if, else khi xác định tính đúng sai, switch khi biết trước điều kiện và số điều kiện nên lớn hơn 3.</p>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">Toán tử 3 ngôi (Ternary operator)</div>
+				<div class="box-accordion__content js-accordion-content">
+					<div class="box-syntax">
+						<p class="box-syntax__title">Syntax:</p>
+						<div class="box-syntax__content">
+							<p>variable_name = (condition) ? value1 : value2;</p>
+						</div>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p><span class="txt-primary">let</span> exp = 1;</p>
+							<p><span class="txt-primary">let</span> salary = exp > 3 ? 1000 : 500;</p>
+							<p>console.log(salary) // 500</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">Vòng lặp (Loop)</div>
+				<div class="box-accordion__content js-accordion-content">
+					<h3 class="hdg-lv3">Vòng lặp for</h3>
+					<p>Các vòng lặp có thể thực thi một khối mã nhiều lần.</p>
+					<div class="box-syntax">
+						<p class="box-syntax__title">Syntax:</p>
+						<div class="box-syntax__content">
+							<p><span class="txt-primary">for</span> (điều kiện 1; điều kiện 2; điều kiện 3) {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-info">// code block to be executed</span></p>
+							<p>}</p>
+						</div>
+					</div>
 					<div class="box-example">
 						<p class="box-example__title">Ví dụ</p>
 						<div class="box-example__inner">
@@ -1028,11 +1138,25 @@
 						</div>
 						<p class="txt-note">&nbsp;&nbsp;&nbsp;&nbsp;</p>
 					</div>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">★★★</div>
+				<div class="box-accordion__content js-accordion-content">
+					<h3 class="hdg-lv3">★★★</h3>
+					<p>★★★</p>
 					<div class="box-syntax">
 						<p class="box-syntax__title">Syntax:</p>
 						<div class="box-syntax__content">
 							<p><span class="txt-primary">const</span> array_name = [item1, item2, ...];</p>
 						</div>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>★★★</p>
+						</div>
+						<p class="txt-note">&nbsp;&nbsp;&nbsp;&nbsp;</p>
 					</div>
 				</div>
 			</div>

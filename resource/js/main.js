@@ -472,6 +472,98 @@ console.log(!0);
 /* -----------------------------------------------
  Date
 -------------------------------------------------- */
-let d = new Date();
+// let d = new Date();
 // console.log(d);
-console.log(d.getFullYear());
+// console.log(d.getFullYear());
+
+/* -----------------------------------------------
+ Câu lệnh if, else
+-------------------------------------------------- */
+// var date = new Date();
+// var time = date.getHours();
+// if (time < 10) {
+// 	greeting = "Good morning";
+// } else if (time < 20) {
+// 	greeting = "Good day";
+// } else {
+// 	greeting = "Good evening";
+// }
+// console.log(greeting);
+
+/* -----------------------------------------------
+ Câu lệnh switch
+-------------------------------------------------- */
+// Phương thức getDay() trả về ngày trong tuần dưới dạng một số từ 0 đến 6.
+// switch (new Date().getDay()) {
+// 	case 0:
+// 		day = "Sunday";
+// 		break;
+// 	case 1:
+// 		day = "Monday";
+// 		break;
+// 	case 2:
+// 		 day = "Tuesday";
+// 		break;
+// 	case 3:
+// 		day = "Wednesday";
+// 		break;
+// 	case 4:
+// 		day = "Thursday";
+// 		break;
+// 	case 5:
+// 		day = "Friday";
+// 		break;
+// 	case 6:
+// 		day = "Saturday";
+// }
+// console.log(day);
+
+// Nếu hôm nay không phải là Thứ Bảy (6) cũng không phải Chủ Nhật (0), hãy viết một tin nhắn mặc định:
+// switch (new Date().getDay()) {
+// 	case 6:
+// 		text = "Today is Saturday";
+// 		break;
+// 	case 0:
+// 		text = "Today is Sunday";
+// 		break;
+// 	default:
+// 		text = "Looking forward to the Weekend";
+// }
+// console.log(text);
+
+// Trong trường hợp ví dụ này, 4 và 5 chia sẻ cùng một khối mã và 0 và 6 chia sẻ một khối mã khác:
+// switch (new Date().getDay()) {
+// 	case 4:
+// 	case 5:
+// 		text = "Soon it is Weekend";
+// 		break;
+// 	case 0:
+// 	case 6:
+// 		text = "It is Weekend";
+// 		break;
+// 	default:
+// 		text = "Looking forward to the Weekend";
+// }
+// console.log(text);
+
+/* -----------------------------------------------
+ Toán tử 3 ngôi
+-------------------------------------------------- */
+// var course = {
+// 	name: 'Javascript',
+// 	coin: 250
+// }
+
+// if (course.coin > 0) {
+// 	console.log(`${course.coin} Coin`);
+// } else {
+// 	console.log('Miễn phí');
+// }
+
+// var result = course.coin > 0 ? `${course.coin} Coin` : 'Miễn phí';
+// console.log(result);
+
+/* -----------------------------------------------
+ Vòng lặp
+-------------------------------------------------- */
+// for
