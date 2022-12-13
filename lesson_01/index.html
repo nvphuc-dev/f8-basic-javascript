@@ -1134,9 +1134,455 @@
 					<div class="box-example">
 						<p class="box-example__title">Ví dụ</p>
 						<div class="box-example__inner">
-							<p>★★★</p>
+							<p>for(var i = 1; i <= 10; i++){</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;console.log(i);</p>
+							<p>}</p>
 						</div>
-						<p class="txt-note">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+					</div>
+					<h3 class="hdg-lv3">Vòng lặp for/in</h3>
+					<p>Câu lệnh for in trong JavaScript lặp qua các thuộc tính của một Đối tượng:</p>
+					<div class="box-syntax">
+						<p class="box-syntax__title">Syntax:</p>
+						<div class="box-syntax__content">
+							<p><span class="txt-primary">for</span> (key in object) {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-info">// code block to be executed</span></p>
+							<p>}</p>
+						</div>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>let myInfo = {</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;name: 'Kenvin Nguyen',</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;age: 35,</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;address: 'Quang Ngai'</p>
+							<p>}</p>
+							<p>for(let key in myInfo){</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;console.log(myInfo[key]);</p>
+							<p>}</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">Vòng lặp for/of</h3>
+					<p>Câu lệnh for of của JavaScript lặp qua các giá trị của một đối tượng có thể lặp lại.<br>Nó cho phép bạn lặp qua các cấu trúc dữ liệu có thể lặp lại như Mảng, Chuỗi, Bản đồ, NodeLists, v.v.:</p>
+					<div class="box-syntax">
+						<p class="box-syntax__title">Syntax:</p>
+						<div class="box-syntax__content">
+							<p><span class="txt-primary">for</span> (variable of iterable) {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-info">// code block to be executed</span></p>
+							<p>}</p>
+						</div>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>let myInfo = {</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;name: 'Kenvin Nguyen',</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;age: 35,</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;address: 'Quang Ngai'</p>
+							<p>}</p>
+							<p>for(let value of Object.values(myInfo)){</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;console.log(value);</p>
+							<p>}</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">Vòng lặp while</h3>
+					<p>The while loop loops through a block of code as long as a specified condition is true.</p>
+					<div class="box-syntax">
+						<p class="box-syntax__title">Syntax:</p>
+						<div class="box-syntax__content">
+							<p><span class="txt-primary">while</span> (condition) {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-info">// code block to be executed</span></p>
+							<p>}</p>
+						</div>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>while (i < 10) {</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;text += "The number is " + i;</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;i++;</p>
+							<p>}</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">Vòng lặp do/while</h3>
+					<p>The do while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
+					<div class="box-syntax">
+						<p class="box-syntax__title">Syntax:</p>
+						<div class="box-syntax__content">
+							<p><span class="txt-primary">do</span> {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-info">// code block to be executed</span></p>
+							<p>}</p>
+							<p><span class="txt-primary">while</span> (condition);</p>
+						</div>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>do {</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;text += "The number is " + i;</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;i++;</p>
+							<p>}</p>
+							<p>while (i < 10);</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">Break & Continue trong vòng lặp</h3>
+					<p>The break statement "jumps out" of a loop.</p>
+					<p>The continue statement "jumps over" one iteration in the loop.</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>for(let i = 0; i < 10; i++){</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;if(i % 2 !== 0 ){</p>
+									<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue;</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;console.log(i); //In các sổ chẵn</p>
+							<p>}</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">Vòng lặp lồng nhau</h3>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>let array = [</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;[1, 2],</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;[3, 4],</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;[5, 6]</p>
+							<p>];</p>
+							<p>for(let i = 0; i < array.length; i++){</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;for(let j = 0; j < array[i].length; j++){</p>
+									<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(array[i][j]);</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+							<p>}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">Làm việc với mảng nâng cao</div>
+				<div class="box-accordion__content js-accordion-content">
+					<h3 class="hdg-lv3">forEach()</h3>
+					<p>Phương thức forEach() gọi một hàm (hàm gọi lại) một lần cho mỗi phần tử mảng.</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>const numbers = [45, 4, 9, 16, 25];</p>
+							<p>let txt = "";</p>
+							<p>numbers.forEach(myFunction);</p>
+
+							<p>function myFunction(value, index, array) {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;txt += value + "< br >";</p>
+							<p>}</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">every()</h3>
+					<p>Phương thức every() kiểm tra xem tất cả các giá trị mảng có vượt qua bài kiểm tra hay không.</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>const numbers = [45, 4, 9, 16, 25];</p>
+							<p>let allOver18 = numbers.every(myFunction);</p>
+
+							<p>function myFunction(value, index, array) {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;return value > 18;</p>
+							<p>}</p>
+						</div>
+						<p class="txt-note">Ví dụ này kiểm tra xem tất cả các giá trị mảng có lớn hơn 18 hay không?</p>
+					</div>
+					<h3 class="hdg-lv3">some()</h3>
+					<p>Phương thức some() kiểm tra xem một số giá trị mảng có vượt qua bài kiểm tra hay không.</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>const numbers = [45, 4, 9, 16, 25];</p>
+							<p>let someOver18 = numbers.some(myFunction);</p>
+
+							<p>function myFunction(value, index, array) {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;return value > 18;</p>
+							<p>}</p>
+						</div>
+						<p class="txt-note">Ví dụ này kiểm tra xem một số giá trị mảng có lớn hơn 18 không?</p>
+					</div>
+					<h3 class="hdg-lv3">find()</h3>
+					<p>Phương thức find() trả về giá trị của phần tử mảng đầu tiên vượt qua hàm kiểm tra.</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>const numbers = [45, 4, 9, 16, 25];</p>
+							<p>let first = numbers.find(myFunction);</p>
+
+							<p>function myFunction(value, index, array) {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;return value > 18;</p>
+							<p>}</p>
+						</div>
+						<p class="txt-note">Ví dụ này tìm (trả về giá trị của) phần tử đầu tiên lớn hơn 18</p>
+						<p class="txt-note">find() là một tính năng ES6 (JavaScript 2015).</p>
+					</div>
+					<h3 class="hdg-lv3">map()</h3>
+					<p>Phương thức map() tạo một mảng mới bằng cách thực hiện một hàm trên từng phần tử mảng.<br>
+						Phương thức map() không thực thi hàm đối với các phần tử mảng không có giá trị.<br>
+						Phương thức map() không thay đổi mảng ban đầu.</p>
+					<p class="txt-note">Chỉnh sửa hay thổi đổi 1 array</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>const numbers1 = [45, 4, 9, 16, 25];</p>
+							<p>const numbers2 = numbers1.map(myFunction);</p>
+
+							<p>function myFunction(value, index, array) {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;return value * 2;</p>
+							<p>}</p>
+						</div>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>const numbers1 = [45, 4, 9, 16, 25];</p>
+							<p>const numbers2 = numbers1.map(myFunction);</p>
+
+							<p>function myFunction(value) {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;return value * 2;</p>
+							<p>}</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">reduce()</h3>
+					<p>Phương thức reduce() chạy một hàm trên từng phần tử mảng để tạo (rút gọn thành) một giá trị đơn.</p>
+					<p>Phương thức reduce() hoạt động từ trái sang phải trong mảng. Xem thêm lessRight().</p>
+					<p class="txt-note">The reduce() method does not reduce the original array.</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ: Flat - 'Làm phẳng' mảng từ Depth array - 'Mảng sâu'</p>
+						<div class="box-example__inner">
+							<p>let depthArray = [1, 2, [3, 4], 5, 6, [7, 8, 9]];</p>
+							<p>let flatArray = depthArray.reduce(function(flatOutput, depthItem){</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;return flatOutput.concat(depthItem);</p>
+							<p>}, []);</p>
+							<p>console.log(flatArray); // [1, 2, 3, 4, 5, 6, 7, 8, 9]</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">String/Array includes() method</div>
+				<div class="box-accordion__content js-accordion-content">
+					<p>Tìm kiếm</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>let title = 'Responsive web design';</p>
+							<p>console.log(title.includes('web'));</p>
+							<br>
+							<p>let courses = ['Javascript', 'PHP', 'Dart'];</p>
+							<p>console.log(courses.includes('Ruby'));</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">Math object</div>
+				<div class="box-accordion__content js-accordion-content">
+					<h3 class="hdg-lv3">Math.PI</h3>
+					<p>Đối tượng Toán học JavaScript cho phép bạn thực hiện các tác vụ toán học trên các con số.</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>Math.PI, trả về số PI </p>
+							<p>Math.round(1.49), làm tròn số</p>
+							<p>Math.abs(-4), trả về giá trị tuyệt đối (biến số âm thành dương)</p>
+							<p>Math.ceil(), làm tròn trên</p>
+							<p>Math.floor(), làm tròn dưới</p>
+							<p>Math.random(), trả về số thập phân ngẫu nhiên nhỏ hơn 1</p>
+							<p>Math.min(), trả về số thấp nhất</p>
+							<p>Math.max(), trả về số lớn nhất</p>
+						</div>
+						<p class="txt-note">https://www.w3schools.com/js/js_math.asp</p>
+					</div>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">Callback</div>
+				<div class="box-accordion__content js-accordion-content">
+					<p>Là hàm (function) được truyền qua đối số</p>
+					<p>Khi gọi hàm khác</p>
+					<p class="txt-note">1. Là hàm</p>
+					<p class="txt-note">2. Được truyền qua đối số</p>
+					<p class="txt-note">3. Được gọi lại (trong hàm nhận đối số)</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>function myFunction(param){</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;if(typeof param === 'function'){</p>
+									<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;param('Học lập trình');</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+							<p>}</p>
+							<p>function myCallback(value){</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;console.log('Value:', value);</p>
+							<p>}</p>
+							<p>myFunction(myCallback);</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">JS HTML DOM</div>
+				<div class="box-accordion__content js-accordion-content">
+					<h3 class="hdg-lv3">JavaScript HTML DOM</h3>
+					<p>Với HTML DOM, JavaScript có thể truy cập và thay đổi tất cả các thành phần của tài liệu HTML.</p>
+					<p>Khi một trang web được tải, trình duyệt sẽ tạo Mô hình đối tượng tài liệu của trang.</p>
+					<div class="box-example">
+						<p class="box-example__title">Có 3 thành phần</p>
+						<div class="box-example__inner">
+							<p>1. Element</p>
+							<p>2. Attribute</p>
+							<p>3. Text</p>
+						</div>
+						<p class="txt-note">The HTML DOM (Document Object Model)</p>
+					</div>
+					<h3 class="hdg-lv3">JavaScript - HTML DOM Methods</h3>
+					<p>Các phương thức HTML DOM là các hành động bạn có thể thực hiện (trên các Phần tử HTML).</p>
+					<p>Thuộc tính HTML DOM là các giá trị (của Phần tử HTML) mà bạn có thể đặt hoặc thay đổi.</p>
+					<h3 class="hdg-lv3">Get element methods</h3>
+					<p>1. Element: ID, Class, tag, CSS selector, HTML collection</p>
+					<p>2. Attribute</p>
+					<p>3. Text</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<h2 class="heading">HTML DOM</h2>
+							<h2 class="heading">HTML DOM</h2>
+							<h2 class="heading">HTML DOM</h2>
+							<div class="box">
+								<h3 class="heading-3">Hello.</h3>
+							</div>
+							<div class="box-1">
+								<ul>
+									<li>JavaScript 1</li>
+									<li>PHP 1</li>
+								</ul>
+							</div>
+							<div class="box-2">
+								<ul>
+									<li>JavaScript 2</li>
+									<li>PHP 2</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">DOM Attribute</h3>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p class="paragraph">
+								<span>DOM</span>
+								<span>Attribute</span>
+							</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">InnerHTML Propertype</h3>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<div class="box">
+								<p>let boxElement = document.querySelector('.box');</p>
+								<p>boxElement.innerHTML = '<h1>New Heading</h1>';</p>
+							</div>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">Node Properties</h3>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<div class="box-node">
+								<p>Node Properties</p>
+							</div>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">DOM CSS (style)</h3>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<div class="box-css"></div>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">ClassList Property</h3>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<div class="box-class">
+								<p>CLASSLIST</p>
+							</div>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">DOM events</h3>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ 1. Attribute events</p>
+						<div class="box-example__inner">
+							<div class="box-events1">
+								<p onclick="console.log(this)">Click Me!</p>
+							</div>
+						</div>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ 2. Assign event using the element node</p>
+						<div class="box-example__inner">
+							<div class="box-events2">
+								<p>Click Me!</p>
+							</div>
+							<div class="box-events2">
+								<p>Click You!</p>
+							</div>
+							<div class="box-events2">
+								<p>Click It!</p>
+							</div>
+						</div>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ DOM events</p>
+						<div class="box-example__inner">
+							<p><input type="text"></p>
+							<p><input type="checkbox"></p>
+							<p>
+								<select name="" id="">
+									<option value="value1">1</option>
+									<option value="value2">2</option>
+									<option value="value3">3</option>
+								</select>
+							</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">PreventDefault and StopPropagation</h3>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ preventDefault 1</p>
+						<div class="box-example__inner">
+							<p><a href="https://f8.edu.vn/" target="_blank">Học lập trình tại F8</a></p>
+							<p><a href="https://google.com/" target="_blank">Tìm kiếm Google</a></p>
+						</div>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ preventDefault 2</p>
+						<div class="box-example__inner">
+							<input type="text" class="frm-input">
+							<ul class="lst-search">
+								<li>Javascript</li>
+								<li>PHP</li>
+								<li>Ruby</li>
+							</ul>
+						</div>
+					</div>
+					<style>
+						ul{
+							display: none;
+						}
+						.frm-input:focus ~ ul{
+							display: block;
+						}
+					</style>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ StopPropagation</p>
+						<div class="box-example__inner">
+							<div class="eParent">
+								DIV
+								<button class="eChildren">Click Me!</button>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

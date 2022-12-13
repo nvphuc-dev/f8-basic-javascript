@@ -567,3 +567,695 @@ console.log(!0);
  Vòng lặp
 -------------------------------------------------- */
 // for
+// for(var i = 1; i <= 10; i++){
+// 	console.log(i);
+// }
+// let myArray = [
+// 	'Javascript',
+// 	'PHP',
+// 	'Java',
+// 	"Dart"
+// ];
+// let arrayLength = myArray.length;
+// for(let i = 0; i < arrayLength; i++){
+// 	console.log(myArray[i]);
+// }
+
+// For/in
+// let myInfo = {
+// 	name: 'Kenvin Nguyen',
+// 	age: 35,
+// 	address: 'Quang Ngai'
+// }
+// for(let key in myInfo){
+// 	console.log(myInfo[key]);
+// }
+
+// for/of
+// for(let value of Object.values(myInfo)){
+// 	console.log(value);
+// }
+
+// while
+// let i = 0;
+// while(i < 10){
+// 	console.log(i);
+// 	i++;
+// }
+
+// do/while
+// let i = 0;
+// let isSuccess = false;
+// do{
+// 	console.log('Nạp thẻ lần ' + i);
+// 	//thành công
+// 	if(false){
+// 		isSuccess = true;
+// 	}
+// 	i++;
+// }while(!isSuccess && i <=3)
+
+// break & continue
+// for(let i = 0; i < 10; i++){
+// 	if(i % 2 !== 0 ){
+// 		continue;
+// 	}
+// 	console.log(i);
+// }
+
+// Vòng lặp lồng nhau - nested loop
+// let array = [
+// 	[1, 2],
+// 	[3, 4],
+// 	[5, 6]
+// ];
+// for(let i = 0; i < array.length; i++){
+// 	for(let j = 0; j < array[i].length; j++){
+// 		console.log(array[i][j]);
+// 	}
+// }
+
+// ex loop
+// in ngược từ 100 đến 1
+// for(let i = 100; i > 0; i--){
+// 	console.log(i);
+// }
+
+// in tăng 5 sau mỗi lần
+// for(let i = 0; i <= 100; i += 5){
+// 	console.log(i);
+// }
+// for(let i = 100; i > 0; i -= 5){
+// 	console.log(i);
+// }
+
+// Làm việc với mảng 2
+// Array method:
+// 	forEach()
+// 	every()
+// 	some()
+// 	find()
+// 	filter()
+// 	map()
+// 	reduce()
+
+// let courses = [
+// 	{
+// 		id: 1,
+// 		name: 'Javascript',
+// 		coin: 250
+// 	},
+// 	{
+// 		id: 2,
+// 		name: 'HTML, CSS',
+// 		coin: 0
+// 	},
+// 	{
+// 		id: 3,
+// 		name: 'PHP',
+// 		coin: 450
+// 	},
+// 	{
+// 		id: 4,
+// 		name: 'Python',
+// 		coin: 350
+// 	},
+// 	{
+// 		id: 5,
+// 		name: 'Dark',
+// 		coin: 250
+// 	},
+// 	{
+// 		id: 6,
+// 		name: 'React',
+// 		coin: 550
+// 	}
+// ];
+
+// Duyệt qua từng phần tử của mảng forEach
+// courses.forEach(function(cource, index){
+// 	console.log(index, cource);
+// });
+
+// every() trả về Boolean Gần giống vs && (đúng khi tất cả cùng đúng)
+// let isFree = courses.every(function(cource, index){
+// 	console.log(index);
+// 	return cource.coin === 0;
+// });
+// console.log(isFree);
+
+// some() trả về Boolean ngược lại với every() => || (sai khi tất cả cùng sai)
+// let isFree = courses.some(function(cource, index){
+// 	console.log(index);
+// 	return cource.coin === 0;
+// });
+// console.log(isFree);
+
+// Tìm kiếm find() chỉ trả về 1 phần tử được tìm thấy.
+// let cource = courses.find(function(cource, index){
+// 	return cource.name === 'Javascript';
+// });
+// console.log(cource);
+
+// Tìm kiếm filter() chỉ trả về tất cả phần tử được tìm thấy.
+// let listcourses = courses.filter(function(cource, index){
+// 	return cource.name === 'Javascript';
+// });
+// console.log(listcourses);
+
+// map(), chỉnh sửa hay thổi đổi 1 array
+// function courceHandler(course, index, originArray){
+// 	// console.log(course);
+// 	// return course;
+// 	return {
+// 		id: course.id,
+// 		name: `Khóa học: ${course.name}`,
+// 		coin: course.coin,
+// 		coinText: `Giá: ${course.coin}`,
+// 		index: index,
+// 		originArray: originArray
+// 	};
+// }
+// let newcourses = courses.map(courceHandler);
+// console.log(newcourses);
+
+// reduce, làm việc khi muốn nhận về 1 giá trị duy nhất
+// Vd tính tổng coin?
+//let totalCoin = 0; //1. Tạo biến lưu trữ
+//Dùng for
+// for(let course of courses){ // 2. Lặp qua các phần tử
+// 	totalCoin += course.coin; // 3. Thực hiện lưu trữ
+// }
+
+// dùng reduce
+// var i = 0;
+// function coinHandler(accumulator, currentValue, currentIndex, originArray){
+// 	// i++;
+// 	let total = accumulator + currentValue.coin;
+// 	// console.table({
+// 	// 	'Lượt chạy: ': i,
+// 	// 	'Biến tích trữ: ' : accumulator,
+// 	// 	'Giá khóa học: ' : currentValue.coin,
+// 	// 	'Tích trữ được: ' : total
+// 	// });
+// 	// console.log(currentValue);
+// 	return total;
+// }
+// let totalCoin = courses.reduce(coinHandler, 0);
+
+// Viết gọn
+// function coinHandler(accumulator, currentValue){
+// 	return accumulator + currentValue.coin;
+// }
+// let totalCoin = courses.reduce(coinHandler, 0);
+// or
+// let totalCoin = courses.reduce(function (accumulator, currentValue){
+// 	return accumulator + currentValue.coin;
+// }, 0);
+
+// ES6
+// let totalCoin = courses.reduce((a, b) => a + b.coin, 0);
+// console.log(totalCoin);
+
+// reduce qua ví dụ
+// let totalCoin = courses.reduce(function(total, course){
+// 	return total + course.coin;
+// }, 0); // initial value
+// console.log(totalCoin);
+
+// let numbers = [250, 0, 450, 350, 250, 550];
+// let total = numbers.reduce(function(total, number){
+// 	return total + number;
+// }); // Không cần truyền biến khởi tạo khi kiểu dữ liệu trùng khớp.
+// console.log(total);
+
+// Flat - 'Làm phẳng' mảng từ Depth array - 'Mảng sâu'
+// let depthArray = [1, 2, [3, 4], 5, 6, [7, 8, 9]];
+// let flatArray = depthArray.reduce(function(flatOutput, depthItem){
+// 	return flatOutput.concat(depthItem);
+// }, []);
+// console.log(flatArray);
+
+// Lấy ra các khóa học và đưa vào 1 mảng mới
+// let topics = [
+// 	{
+// 		topic: 'Front-end',
+// 		courses: [
+// 			{
+// 				id: 1,
+// 				title: 'HTML, CSS'
+// 			},
+// 			{
+// 				id: 2,
+// 				title: 'Javascript'
+// 			},
+// 			{
+// 				id: 3,
+// 				title: 'VueJS'
+// 			},
+// 			{
+// 				id: 4,
+// 				title: 'Angular'
+// 			},
+// 			{
+// 				id: 5,
+// 				title: 'ReactJS'
+// 			}
+// 		]
+// 	},
+// 	{
+// 		topic: 'Back-end',
+// 		courses: [
+// 			{
+// 				id: 1,
+// 				title: 'PHP'
+// 			},
+// 			{
+// 				id: 2,
+// 				title: 'Java'
+// 			},
+// 			{
+// 				id: 3,
+// 				title: 'Ruby'
+// 			},
+// 			{
+// 				id: 4,
+// 				title: 'Python'
+// 			},
+// 			{
+// 				id: 5,
+// 				title: 'NodeJS'
+// 			}
+// 		]
+// 	}
+// ];
+// let newCourses = topics.reduce(function (course, topic){
+// 	return course.concat(topic.courses);
+// }, []);
+// console.log(newCourses);
+
+
+// includes method, phương thức này chỉ tồn tại ở Array và String
+//check: console.log(Array.prototype.includes);
+// let title = 'Responsive web design';
+// console.log(title.includes('web'));
+
+// let courses = ['Javascript', 'PHP', 'Dart'];
+// console.log(courses.includes('Ruby'));
+
+// Math object
+// console.log(Math.PI);
+// console.log(Math.round(1.6));
+// console.log(Math.abs(-6));
+// console.log(Math.ceil(1.54256));
+// console.log(Math.floor(1.54256));
+// console.log(Math.random());
+// console.log(Math.floor(Math.random() * 10));
+// let random = Math.floor(Math.random() * 100);
+// let bonus = [
+// 	'10 coin',
+// 	'20 coin',
+// 	'30 coin',
+// 	'40 coin',
+// 	'50 coin'
+// ];
+// console.log(bonus[random]);
+// if(random < 5){
+// 	console.log('Cường hóa thành công!');
+// }
+
+// console.log(Math.min(-100, 1, 90, 50, 25));
+// console.log(Math.max(-100, 1, 90, 50, 25));
+
+// Hiểu về Javascript Callback Functions | Callback Trong Javascript | Javascript Callback
+// Callback
+// Là hàm (function) được truyền qua đối số
+// Khi gọi hàm khác
+
+// 1. Là hàm
+// 2. Được truyền qua đối số
+// 3. Được gọi lại (trong hàm nhận đối số)
+// function myFunction(param){
+// 	if(typeof param === 'function'){
+// 		param('Học lập trình');
+// 	}
+// }
+// function myCallback(value){
+// 	console.log('Value:', value);
+// }
+// myFunction(myCallback);
+
+// Array.prototype.map2 = function(callback){
+// 	let output = [], arrayLength = this.length;
+// 	for(let i = 0; i < arrayLength; i++){
+// 		let result = callback(this[i], i);
+// 		output.push(result);
+// 	}
+// 	return output;
+// }
+// let courses = [
+// 	'Javascript',
+// 	'PHP',
+// 	'Ruby'
+// ];
+// let htmls = courses.map2(function(course){
+// 	return `<h2>${course}</h2>`;
+// });
+// console.log(htmls.join(''));
+
+// courses.map(function(course){
+// 	console.log(course)
+// });
+
+// Empty elements of array?
+// let courses = [
+// 	'Javascript',
+// 	'PHP',
+// 	'Ruby'
+// ];
+// courses.length = 10;
+// for (let index in courses){
+// 	console.log(courses[index]);
+// }
+
+// My forEach() method
+// forEach2
+// Array.prototype.forEach2 = function(callback){
+// 	for (var index in this){ // for in duyệt qua không chỉ element trong mảng mà còn duyệt qua element trong _proto_
+// 		if(this.hasOwnProperty(index)){
+// 			callback(this[index], index, this);
+// 		}
+// 	}
+// }
+// courses.length = 100;
+// courses.forEach2(function(course, index, array){
+// 	console.log(course, index, array);
+// });
+// courses.forEach(function(course, index, array){
+// 	console.log(course, index, array);
+// });
+
+// Ôn lại:
+// 1. Object prototype
+// 2. for in
+// 3. hasOwnProperty // tìm phương thức gần nhất
+
+// My filter() method
+// Array.prototype.filter2 = function(callback){
+// 	let output = [];
+// 	for(let index in this){
+// 		if(this.hasOwnProperty(index)){
+// 			let result = callback(this[index], index, this);
+// 			if(result){
+// 				output.push(this[index]);
+// 			}
+// 		}
+// 	}
+// 	return output;
+// }
+// let courses = [
+// 	{
+// 		name: 'Javascript',
+// 		coin: 560
+// 	},
+// 	{
+// 		name: 'PHP',
+// 		coin: 850
+// 	},
+// 	{
+// 		name: 'Ruby',
+// 		coin: 900
+// 	}
+// ];
+// let filterCourses = courses.filter2(function(course, index, array){
+// 	return course.coin > 700;
+// });
+// let filterCourses = courses.filter(function(course, index, array){
+// 	return course.coin > 700;
+// });
+// console.log(filterCourses);
+
+// My some() method // trả về boonlean
+// Array.prototype.some2 = function(callback){
+// 	let output = false;
+// 	for(index in this){
+// 		if(this.hasOwnProperty(index)){
+// 			if(callback(this[index], index, this)){
+// 				output = true;
+// 				break;
+// 			}
+// 		}
+// 	}
+// 	return output;
+// }
+// let courses = [
+// 	{
+// 		name: 'Javascript',
+// 		coin: 560,
+// 		isFinished: false
+// 	},
+// 	{
+// 		name: 'PHP',
+// 		coin: 850,
+// 		isFinished: false
+// 	},
+// 	{
+// 		name: 'Ruby',
+// 		coin: 900,
+// 		isFinished: false
+// 	}
+// ];
+// let result = courses.some2(function(course, index, array){
+// 	return course.isFinished;
+// });
+// let result = courses.some(function(course, index, array){
+// 	return course.isFinished;
+// });
+// console.log(result);
+
+// My every() method / trả về boonlean tất cả đúng mới đúng
+// Array.prototype.every2 = function(callback){
+// 	let output = true;
+// 	for(let index in this){
+// 		if(this.hasOwnProperty(index)){
+// 			let result = callback(this[index], index, this);
+// 			if(!result){
+// 				output = false;
+// 				break;
+// 			}
+// 		}
+// 	}
+// 	return output;
+// }
+// let courses = [
+// 	{
+// 		name: 'Javascript',
+// 		coin: 560,
+// 		isFinished: true
+// 	},
+// 	{
+// 		name: 'PHP',
+// 		coin: 850,
+// 		isFinished: false
+// 	},
+// 	{
+// 		name: 'Ruby',
+// 		coin: 900,
+// 		isFinished: true
+// 	}
+// ];
+// let result = courses.every2(function(course, index, array){
+// 	// return course.isFinished;
+// 	return course.coin > 500;
+// });
+// let result = courses.every(function(course, index, array){
+// 	return course.isFinished;
+// });
+// console.log(result);
+
+// Đệ quy là gì? Học về đệ quy! What is recursive? Learn about recursive!
+// Yêu cầu
+// Cho array = ['a', 'b,', 'c', 'a', 'b,', 'c', 'd'];
+// Tạo mảng mới newArray = ['a', 'b', 'c', 'd']; // Không dùng cáo hàm có sẵng
+// Sử dụng new Set để sắp xếp và lấy các phần tử duy nhất
+// let array = ['a', 'b,', 'c', 'a', 'b,', 'c', 'd'];
+// console.log(new Set(array)); // Set là Entries
+// console.log([...(new Set(array))]); //Dùng ES6 biến Entries thành mảng
+
+// Sử dụng đệ quy để giài bài toán theo y/c
+// Đệ quy là hàm gọi lại chính nó.
+// 1. xác định điểm đừng
+// 2. có phần xử lý logic => để tạo ra điểm dừng
+// Ví dụ count down
+// function countDown(num){
+// 	if(num > 0){
+// 		console.log(num);
+// 		return countDown(num - 1);
+// 	}
+// }
+// countDown(3);
+// function loop(start, end, callback){
+// 	if(start < end){
+// 		callback(start);
+// 		return loop(start + 1, end, callback);
+// 	}
+// }
+// let array = ['Javascript', 'PHP', 'Ruby'];
+// loop(0, array.length, function(index){
+// 	console.log(array[index]);
+// });
+// tính giai thừa
+// function giaiThua(num){
+	// let output = 1;
+	// for (let i = num; i > 0; i--){
+	// 	output = output * i;
+	// }
+	// return output;
+
+	//đệ quy
+	// if(num > 0){
+	// 	return num * giaiThua(num - 1);
+	// }
+	// return 1;
+// }
+// console.log(giaiThua(6));
+
+// HTML DOM
+// Có 3 thành phần
+// 1. Element
+// 2. Attribute
+// 3. Text
+
+// JS: browser | server (Nodejs)
+// browser: html -> DOM -> WEB API
+// let headingNode = document.getElementById('heading');
+// let headingNodes = document.getElementsByClassName('heading');
+// let headingNode = document.querySelector('.box .heading-3');
+// console.log(headingNode);
+
+// let listItemNodes = document.querySelectorAll('.box-1 li');
+// let boxNode = document.querySelector('.box-1');
+// Công việc 1: sử dụng tới `boxNode`
+// ....
+// console.log(boxNode);
+// Công việc 2: sử dụng tới các li elements là con của `.box-1`
+// console.log(boxNode.getElementsByTagName('li'));
+
+// let p = document.querySelector('.paragraph');
+// p.title = 'Title';
+// p.setAttribute('data-id', 5);
+
+// InnerText vs textContent Property
+// let p = document.querySelector('.paragraph');
+// console.log(p.innerText); // hiển thị những gì như nhìn thấy
+// console.log(p.textContent); // hiển thị những gì nằm trong textNode
+// sửa
+// p.innerText = 'New Title';
+
+// InnerHTML Propertype
+// let boxElement = document.querySelector('.box');
+// boxElement.innerHTML = '<h1>New Heading</h1>';
+// console.log(document.querySelector('.box h1').innerText);
+
+// Node properties
+// let boxElement = document.querySelector('.box-node');
+// console.log([boxElement]);
+
+// DOM style
+// css dùng - -> background-position
+// js camelCase -> backgroundPosition
+// let boxElement = document.querySelector('.box-css');
+// boxElement.style.width = '200px';
+// boxElement.style.height = '100px';
+// boxElement.style.backgroundColor = 'green';
+// Object.assign(boxElement.style, {
+// 	width: '200px',
+// 	height: '100px',
+// 	backgroundColor: 'green'
+// });
+
+// ClassList Property
+// add // thêm class, có thể thêm nhiều cách nhau dấu ,
+// contains // kiểm tra có tồn tại class hay không
+// remove // xóa class
+// toggle // nếu có thì xóa bỏ class, nếu không có thì thêm class
+// let boxElement = document.querySelector('.box-class');
+// setInterval(() => {
+// 	boxElement.classList.toggle('txt-blue');
+// }, 1000);
+
+// DOM events
+// 1. Attribute events // Lắng nghe người dùng
+
+// 2. Assign event using the element node // gáng sự kiện
+// let element = document.querySelector('.box-events2');
+// element.onclick = function(e){
+// 	console.log(e.target);
+// }
+// let elements = document.querySelectorAll('.box-events2');
+// for(let i = 0; i < elements.length; i++){
+// 	elements[i].onclick = function(e){
+// 		console.log(e.target);
+// 	}
+// }
+
+// DOM events example
+// 1. Input / Select
+let inputElement = document.querySelector('input[type="text"]');
+inputElement.oninput = function(e){
+	console.log(e.target.value);
+}
+
+let checkBoxElement = document.querySelector('input[type="checkbox"]');
+checkBoxElement.onchange = function(e){
+	console.log(e.target.checked);
+}
+
+let selectElement = document.querySelector('select');
+selectElement.onchange = function(e){
+	console.log(e.target.value);
+}
+
+// 2. Key up / down
+inputElement.onkeydown = function(e){
+	switch(e.which){
+		case 27:
+			console.log('EXIT');
+			break;
+		case 13:
+			console.log('SEND CHAT');
+			break;
+	}
+}
+
+// PreventDefault and StopPropagation
+// 1. PreventDefault // loại bỏ hành vi mặc định trên trình duyệt
+let aElements = document.links;
+for(let i = 0; i < aElements.length; i++){
+	aElements[i].onclick = function(e){
+		// console.log(e.target.href);
+		// nếu là f8 thì cho chuyển trang
+		if(!e.target.href.startsWith('https://f8.edu.vn/')){
+			e.preventDefault();
+		}
+	}
+}
+
+let ulElement = document.querySelector('.lst-search');
+ulElement.onmousedown = function(e){
+	e.preventDefault();
+}
+ulElement.onclick = function(e){
+	console.log(e.target);
+}
+
+// 2. StopPropagation // loại bỏ sự kiện nổi bột (hành vi lang truyền)
+let parentElement = document.querySelector('.eParent');
+parentElement.onclick = function(){
+	console.log('DIV');
+}
+let childrenElement = document.querySelector('.eChildren');
+childrenElement.onclick = function(e){
+	e.stopPropagation();
+	console.log('Click Me!');
+}

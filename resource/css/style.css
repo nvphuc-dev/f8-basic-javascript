@@ -8,7 +8,7 @@
 	- The "symbol *" part is to solve Firefox SVG sprite bug
 */
  *:where(:not(html, iframe, canvas, img, svg, video):not(svg *, symbol *)) {
-	all: unset;
+	/* all: unset; */
 	display: revert;
 }
 
@@ -135,6 +135,9 @@ a:hover{
 }
 .txt-info{
 	color: #008000;
+}
+.txt-blue{
+	color: blue;
 }
 
 /* Header */
