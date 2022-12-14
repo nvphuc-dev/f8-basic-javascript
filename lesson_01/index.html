@@ -1584,6 +1584,53 @@
 							</div>
 						</div>
 					</div>
+					<h3 class="hdg-lv3">Event Listener</h3>
+					<p>Phương thức addEventListener()</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<button id="btn-event-listener">Click Me!</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">Thực hành với DOM</div>
+				<div class="box-accordion__content js-accordion-content">
+					<h3 class="hdg-lv3">Form validation</h3>
+					<p>Form validation - Phần 1</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ form đăng ký</p>
+						<div class="box-example__inner">
+							<div class="box-form">
+								<form action="" class="frm frm-register" id="frm-register">
+									<p class="frm-title">Thành Viên Đăng Ký</p>
+									<p class="frm-des">Cùng nhau học lập trình tại F8.</p>
+									<div class="frm-group">
+										<label for="fullname">Tên đầy đủ</label>
+										<input type="text" id="fullname" name="fullname" class="frm-control" placeholder="VD: Teresa Teng">
+										<span class="frm-error"></span>
+									</div>
+									<div class="frm-group">
+										<label for="email">Email</label>
+										<input type="text" id="email" name="email" class="frm-control" placeholder="VD: teresa@gmail.com">
+										<span class="frm-error"></span>
+									</div>
+									<div class="frm-group">
+										<label for="password">Mật khẩu</label>
+										<input type="password" id="password" name="password" class="frm-control" placeholder="Nhập mật khẩu">
+										<span class="frm-error"></span>
+									</div>
+									<div class="frm-group">
+										<label for="password_confimation">Nhập lại mật khẩu</label>
+										<input type="password" id="password_confimation" name="password_confimation" class="frm-control" placeholder="Nhập lại mật khẩu">
+										<span class="frm-error"></span>
+									</div>
+									<p class="frm-button"><button type="submit" class="btn btn-primary">Đăng Ký</button></p>
+								</form>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="box-accordion__item js-accordion-item">
@@ -1615,6 +1662,29 @@
 	</footer>
 	<script src="../resource/js/jquery-3.6.0.min.js"></script>
 	<script src="../resource/js/utilities.js"></script>
+	<script src="../resource/js/from-validator.js"></script>
 	<script src="../resource/js/main.js"></script>
+	<!-- Mon muốn sử dụng lib validator như sau -->
+	<script>
+		Validator({
+			form: '#frm-register',
+			error: '.frm-error',
+			rules: [
+				Validator.isRequired('#fullname', 'Vui lòng nhập đầy đủ họ tên'),
+				Validator.isRequired('#email'),
+				Validator.isEmail('#email'),
+				Validator.isRequired('#password'),
+				Validator.minLength('#password', 8),
+				Validator.isRequired('#password_confimation'),
+				Validator.isComfimed('#password_confimation', function(){
+					return document.querySelector('#frm-register #password').value;
+				}, 'Mật khẩu nhập lại không chính xác!'),
+			],
+			onSubmit: function(data){
+				// Call API
+				console.log(data);
+			}
+		});
+	</script>
 </body>
 </html>

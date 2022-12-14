@@ -452,3 +452,90 @@ a:hover{
 	border: solid 1px #999;
 	border-radius: 4px;
 }
+
+.box-form{
+	max-width: 380px;
+	margin: 0 auto;
+	background: #f7f7f7;
+	padding: 50px 25px;
+	box-sizing: border-box;
+}
+.btn{
+	font-size: 16px;
+	line-height: 1.25;
+	color: #fff;
+	background: #108040;
+	border: solid 1px #108040;
+	border-radius: 3px;
+	padding: 10px 15px;
+	box-sizing: border-box;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	outline: none;
+}
+.btn:focus{
+	border-color: #f05123;
+}
+@media(min-width: 768px){
+	.btn:hover{
+		background: transparent;
+		color: #108040;
+	}
+}
+.frm{}
+.frm-title{
+	margin: 0;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+}
+.frm-des{
+	font-size: 16px;
+	text-align: center;
+	color: #666;
+	margin: 10px 0 40px;
+}
+.frm-group{
+	display: flex;
+	flex-direction: column;
+}
+.frm-group + .frm-group{
+	margin-top: 15px;
+}
+.frm-group label{
+	margin-bottom: 5px;
+	font-weight: bold;
+	font-size: 14px;
+}
+.frm-control{
+	border: solid 1px #ddd;
+	box-sizing: border-box;
+	padding: 12px 10px;
+	font-size: 14px;
+	color: #333;
+	transition: all 0.3s ease;
+	outline: none;
+}
+.frm-error{
+	display: block;
+	margin-top: 5px;
+}
+.frm-group.invalid .frm-error{
+	color: #f00;
+}
+.frm-group.invalid .frm-control{
+	border-color: #f00;
+}
+.frm-control:focus,
+.frm-control:hover{
+	border-color: #108040;
+}
+.frm-control::placeholder{
+	color: #888;
+}
+.frm-button{
+	margin: 15px 0 0;
+}
+.frm-button .btn{
+	width: 100%;
+}

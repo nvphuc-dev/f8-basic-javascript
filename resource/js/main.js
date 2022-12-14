@@ -1259,3 +1259,60 @@ childrenElement.onclick = function(e){
 	e.stopPropagation();
 	console.log('Click Me!');
 }
+
+// Event Listener
+// 1. Xử lý nhiều việc khi 1 event xảy ra
+// 2. Lắng nghe / hủy bỏ lắng nghe
+// Đưa ra ví dụ để giai quyết 2 vấn đề trên qua 2 cách xử lý là dùng DOM event ở bài cũ và event listener trong bài mới này.
+
+let btn = document.getElementById('btn-event-listener');
+
+// DOM event - Sử dụng cho các trường hợp đơn giản, khong có nhu cầu gỡ bỏ nó đi
+// Xử lý nhiều việc trên 1 event
+// btn.onclick = function(){
+// 	// việc 1
+// 	console.log('Việc 1');
+// 	// việc 2
+// 	console.log('Việc 2');
+// 	// việc 3
+// 	alert('Việc 3');
+// }
+// lắng nghe sau 3s mới thực hiện
+// setTimeout(function(){
+// 	btn.onclick = function(){
+// 		// việc 1
+// 		console.log('Việc 1');
+// 		// việc 2
+// 		console.log('Việc 2');
+// 		// việc 3
+// 		alert('Việc 3');
+// 	}
+// }, 3000);
+
+// hủy bỏ sau 3s
+// btn.onclick = function(){
+// 	// việc 1
+// 	console.log('Việc 1');
+// 	// việc 2
+// 	console.log('Việc 2');
+// 	// việc 3
+// 	alert('Việc 3');
+// }
+// setTimeout(function(){
+// 	btn.onclick = function(){} //gán sự kiện bằng 1 function rỗng để thay thế cho tác vụ cũ.
+// }, 3000);
+
+// event listener - sử dung vs xử lý phức tạp
+function viec1(){
+	console.log('việc 1');
+}
+function viec2(){
+	alert('việc 2');
+}
+//lắng nghe
+btn.addEventListener('click', viec1);
+btn.addEventListener('click', viec2);
+//hủy bỏ
+setTimeout(function(){
+	btn.removeEventListener('click', viec1);
+}, 3000);
