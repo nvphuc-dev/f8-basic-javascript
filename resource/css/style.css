@@ -516,11 +516,13 @@ a:hover{
 	transition: all 0.3s ease;
 	outline: none;
 }
-.frm-error{
+.frm-error,
+.frm-message{
 	display: block;
 	margin-top: 5px;
 }
-.frm-group.invalid .frm-error{
+.frm-group.invalid .frm-error,
+.frm-group.invalid .frm-message{
 	color: #f00;
 }
 .frm-group.invalid .frm-control{
@@ -538,4 +540,9 @@ a:hover{
 }
 .frm-button .btn{
 	width: 100%;
+}
+.frm-checkbox--inline{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }

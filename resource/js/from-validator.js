@@ -1,12 +1,20 @@
 // Đối tượng 'Validator'
 function Validator(options){
 	// console.log(options.form);
+	function getParent(element, selector){
+		while(element.parentElement){
+			if(element.parentElement.matches(selector)){
+				return element.parentElement;
+			}
+			element = element.parentElement;
+		}
+	}
 
 	let selectorRules = {};
 
 	// Hàm thực hiện validate
 	function validate(inputElement, rule){
-		let errorElement = inputElement.parentElement.querySelector(options.error);
+		let errorElement = getParent(inputElement, options.formGroupSelector).querySelector(options.error);
 		let errorMessage;
 
 		// lấy ra các rules của selector
@@ -16,16 +24,29 @@ function Validator(options){
 		// lặp qua từng rule và kiểm tra
 		// nếu có lỗi dừng việc kiểm tra
 		for(let i = 0; i < lengthRules; i++){
-			errorMessage = rules[i](inputElement.value);
+			switch(inputElement.type){
+				case 'radio':
+					errorMessage = rules[i](
+						formElement.querySelector(rule.selector + ':checked')
+					);
+					break;
+				case 'checkbox':
+					errorMessage = rules[i](
+						formElement.querySelector(rule.selector + ':checked')
+					);
+					break;
+				default:
+					errorMessage = rules[i](inputElement.value);
+			}
 			if(errorMessage) break;
 		}
 
 		if(errorMessage){
 			errorElement.innerText = errorMessage;
-			inputElement.parentElement.classList.add('invalid');
+			getParent(inputElement, options.formGroupSelector).classList.add('invalid');
 		}else{
 			errorElement.innerText = '';
-			inputElement.parentElement.classList.remove('invalid');
+			getParent(inputElement, options.formGroupSelector).classList.remove('invalid');
 		}
 
 		return !errorMessage;
@@ -55,7 +76,28 @@ function Validator(options){
 					let enableInputs = formElement.querySelectorAll('[name]:not([disabled])');
 					// console.log(enableInputs);
 					let formValues = Array.from(enableInputs).reduce(function(values, input){
-						return (values[input.name] = input.value) && values;
+						// (values[input.name] = input.value);
+						switch(input.type){
+							case 'radio':
+								values[input.name] = formElement.querySelector('input[name="' + input.name + '"]:checked').value;
+								break;
+							case 'checkbox':
+								if(!input.matches(':checked')){
+									values[input.name] = '';
+									return values;
+								}
+								if(!Array.isArray(values[input.name])){
+									values[input.name] = [];
+								}
+								values[input.name].push(input.value);
+								break;
+							case 'file':
+								values[input.name] = input.files;
+								break;
+							default:
+								values[input.name] = input.value;
+						}
+						return values;
 					}, {});
 					// console.log(formValues);
 
@@ -82,9 +124,8 @@ function Validator(options){
 				selectorRules[rule.selector] = [rule.test];
 			}
 
-			let inputElement = formElement.querySelector(rule.selector);
-			// console.log(inputElement);
-			if(inputElement){
+			let inputElements = formElement.querySelectorAll(rule.selector);
+			Array.from(inputElements).forEach(function(inputElement){
 				// Xử lý khi trường hợp blur khỏi input
 				inputElement.onblur = function(){
 					// console.log('blur ' + rule.selector);
@@ -95,11 +136,11 @@ function Validator(options){
 
 				//Xử lý mỗi khi người dùng nhập vào input
 				inputElement.oninput = function(){
-					let errorElement = inputElement.parentElement.querySelector(options.error);
+					let errorElement = getParent(inputElement, options.formGroupSelector).querySelector(options.error);
 					errorElement.innerText = '';
-					inputElement.parentElement.classList.remove('invalid');
+					getParent(inputElement, options.formGroupSelector).classList.remove('invalid');
 				}
-			}
+			});
 		});
 		// console.log(selectorRules);
 	}
@@ -113,7 +154,8 @@ Validator.isRequired = function(selector, message){
 	return {
 		selector: selector,
 		test: function(value){
-			return value.trim() ? undefined : message || 'Vui lòng nhập trường này';
+			// return value.trim() ? undefined : message || 'Vui lòng nhập trường này'; // hãy fix cho trim khoảng trống trước sau
+			return value ? undefined : message || 'Vui lòng nhập trường này';
 		}
 	};
 }
@@ -137,7 +179,7 @@ Validator.minLength = function(selector, min, message){
 	};
 }
 
-Validator.isComfimed = function(selector, getConfirmValue, message){
+Validator.isConfirmed = function(selector, getConfirmValue, message){
 	return {
 		selector: selector,
 		test: function(value){
