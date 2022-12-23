@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Javascript Cơ Bản | F8 Official</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="../resource/css/style.css">
+	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+</head>
+<body>
+	<div id="toast"></div>
+	<header class="header">
+		<div class="wrp-container">
+			<div class="header__content">
+				<a href="/" class="header__logo"><img src="../resource/images/logo.png" alt="fluid-image"></a>
+				<a href="https://fullstack.edu.vn/" target="_blank" class="badge">Học Lập Trình Để Đi Làm</a>
+			</div>
+		</div>
+	</header>
+	<div class="box-page-title">
+		<div class="wrp-container">
+			<h1 class="hdg-lv1">Tạo Toast Message UI</h1>
+			<div class="box-breadcrumb">
+				<ul class="lst-breadcrumb">
+					<li><a href="/lesson_01/">HOME</a></li>
+					<li>Practice - Toast Message UI</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="wrp-container">
+		<ul class="toast-button">
+			<li class="toast-button__item" onclick="showSuccessToast()"><span class="btn btn--success">Show Success Toast</span></li>
+			<li class="toast-button__item" onclick="showInfoToast()"><span class="btn btn--info">Show Info Toast</span></li>
+			<li class="toast-button__item" onclick="showWarningToast()"><span class="btn btn--warning">Show Warning Toast</span></li>
+			<li class="toast-button__item" onclick="showErrorToast()"><span class="btn btn--danger">Show Error Toast</span></li>
+		</ul>
+	</div>
+	<footer class="footer">
+		<div class="wrp-container">
+			<p class="footer__copy">&copy; 2022 - From <a href="https://www.youtube.com/@F8VNOfficial" target="_blank">F8 Official</a>. By Sơn Đặng</p>
+		</div>
+	</footer>
+	<script src="../resource/js/jquery-3.6.0.min.js"></script>
+	<script src="../resource/js/toast.js"></script>
+	<script>
+		function showSuccessToast(){
+			toast({
+				title: 'Success',
+				message: 'Chúc mừng bạn đã đăng ký thành công.',
+				type: 'success',
+				duration: 1000
+			});
+		};
+		function showInfoToast(){
+			toast({
+				title: 'Info',
+				message: 'Thông tin đã cập nhật thành công.',
+				type: 'info',
+				duration: 2000
+			});
+		};
+		function showWarningToast(){
+			toast({
+				title: 'Warning',
+				message: 'Ai đó đã tòm tem với bạn vài phút trước...',
+				type: 'warning',
+				duration: 3000
+			});
+		};
+		function showErrorToast(){
+			toast({
+				title: 'Error',
+				message: 'Đã có lỗi, vui lòng liên hệ quản trị viên.',
+				type: 'error',
+				duration: 4000
+			});
+		}
+	</script>
+</body>
+</html>

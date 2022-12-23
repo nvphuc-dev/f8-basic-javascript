@@ -22,8 +22,8 @@
 			<h1 class="hdg-lv1">JAVASCRIPT CƠ BẢN</h1>
 			<div class="box-breadcrumb">
 				<ul class="lst-breadcrumb">
-					<li><a href="/">HOME</a></li>
-					<li><a href="#">Lesson 01</a></li>
+					<li><a href="/lesson_01/">HOME</a></li>
+					<li>Javascript Cơ Bản</li>
 				</ul>
 			</div>
 		</div>
@@ -1704,6 +1704,175 @@
 				</div>
 			</div>
 			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">JSON (JavaScript Object Notation)</div>
+				<div class="box-accordion__content js-accordion-content">
+					<h3 class="hdg-lv3">JSON là gì?</h3>
+					<p>JSON là một định dạng văn bản để lưu trữ và vận chuyển dữ liệu (chuỗi).</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>'{"name":"John", "age":30, "car":null}'</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">JavaScript Promise Object</div>
+				<div class="box-accordion__content js-accordion-content">
+					<h3 class="hdg-lv3">Promise Object Properties</h3>
+					<p>Promise (ES6) sinh ra để xử lý bất đồng bộ trong js.</p>
+					<div class="box-syntax">
+						<p class="box-syntax__title">Syntax:</p>
+						<div class="box-syntax__content">
+							<p>let promise = new Promise(</p>
+								<p>function(resolve, reject){</p>
+									<p>// resolve();</p>
+									<p>// reject();</p>
+								<p>}</p>
+							<p>);</p>
+						</div>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>let promise = new Promise(</p>
+								<p>function(resolve, reject){</p>
+									<p>resolve([</p>
+										<p>{</p>
+											<p>id: 1,</p>
+											<p>name: 'Javascript'</p>
+										<p>}</p>
+									<p>]);</p>
+									<p>// reject('Có lỗi');</p>
+								<p>}</p>
+							<p>);</p>
+							<p>promise.then(function(courses){</p>
+								<p>console.log(courses);</p>
+							<p>}).catch(function(error){</p>
+								<p>console.log(error);</p>
+							<p>}).finally(function(){</p>
+								<p>console.log('Done!');</p>
+							<p>});</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">Promise chain (chuỗi)</h3>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>function sleep(ms){</p>
+								<p>return new Promise(function(resolve){</p>
+									<p>setTimeout(resolve, ms);</p>
+								<p>});</p>
+							<p>}</p>
+							
+							<p>sleep(1000).then(function(){</p>
+								<p>console.log(1);</p>
+								<p>return sleep(1000);</p>
+							<p>}).then(function(){</p>
+								<p>console.log(2);</p>
+								<p>return sleep(1000);</p>
+							<p>}).then(function(){</p>
+								<p>console.log(3);</p>
+								<p>return sleep(1000);</p>
+							<p>});</p>
+						</div>
+						<p class="txt-note">Sau mỗi giây in ra 1, 2, 3</p>
+					</div>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
+				<div class="box-accordion__title js-accordion-trigger">Javascript ECMAScript 6 (ES6)</div>
+				<div class="box-accordion__content js-accordion-content">
+					<h3 class="hdg-lv3">Let, const</h3>
+					<p>Từ khóa let cho phép bạn khai báo một biến có phạm vi khối.</p>
+					<p>Từ khóa const cho phép bạn khai báo một hằng số (một biến JavaScript có giá trị không đổi).</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<p class="txt-note">const: không cho phép gán lại assigment</p>
+						<p class="txt-note">let, const: phạm vi trong block (scope)</p>
+						<p class="txt-note">let, const: không được đưa lên đầu (hoisting)</p>
+					</div>
+					<h3 class="hdg-lv3">Arrow function trong Javascript ES6</h3>
+					<p>Các hàm mũi tên cho phép một cú pháp ngắn để viết các biểu thức hàm.<br>Bạn không cần từ khóa hàm, từ khóa trả về và dấu ngoặc nhọn.</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>// ES5</p>
+							<p>var x = function(x, y) {</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;return x * y;</p>
+							<p>}</p>
+
+							<p>// ES6</p>
+							<p>const x = (x, y) => x * y;</p>
+							<p>// sum</p>
+							<p>let sum = (a, b) => ({a: a, b: a});</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">Template literals (Template string) trong javascript ES6</h3>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>★★★</p>
+						</div>
+						<p class="txt-note">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+					</div>
+					<h3 class="hdg-lv3">Classes trong Javascript ES6</h3>
+					<p>Lớp JavaScript là mẫu cho Đối tượng JavaScript.<br>Sử dụng từ khóa class để tạo một lớp.<br>Luôn thêm một phương thức có tên constructor():</p>
+					<div class="box-syntax">
+						<p class="box-syntax__title">Syntax:</p>
+						<div class="box-syntax__content">
+							<p>class ClassName {</p>
+								<p>constructor() { ... }</p>
+							<p>}</p>
+						</div>
+					</div>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>class Car {</p>
+								<p>constructor(name, year) {</p>
+								  <p>this.name = name;</p>
+								 <p> this.year = year;</p>
+								<p>}</p>
+							  <p>}</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">Object entries()</h3>
+					<p>Tạo một Array Iterator, sau đó lặp lại các cặp khóa/giá trị:</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>//let fieldName = 'name';</p>
+							<p>let fieldName = 'new-name';</p>
+							<p>let fieldPrice = 'price';</p>
+							<p>const course = {</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;[fieldName]: 'Javascript',</p>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;[fieldPrice]: 500</p>
+							<p>}</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">Default parameter values trong javascript ES6</h3>
+					<p>ES6 cho phép các tham số hàm có giá trị mặc định.</p>
+					<div class="box-example">
+						<p class="box-example__title">Ví dụ</p>
+						<div class="box-example__inner">
+							<p>function myFunction(x, y = 10) {</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;// y is 10 if not passed or undefined</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;return x + y;</p>
+							<p>}</p>
+							<p>myFunction(5); // will return 15</p>
+						</div>
+					</div>
+					<h3 class="hdg-lv3">Destructuring trong javascript ES6</h3>
+					<p>Hiểu như phân rã, sử dụng cho object và array.</p>
+					
+					<h3 class="hdg-lv3">Tagged template literals trong ES6 (ít người biết)</h3>
+
+					<h3 class="hdg-lv3">Module trong javascript ES6</h3>
+					<p>Các mô-đun JavaScript cho phép bạn chia mã của mình thành các tệp riêng biệt.<br>Điều này làm cho việc duy trì cơ sở mã dễ dàng hơn.<br>Các mô-đun JavaScript dựa trên các câu lệnh nhập và xuất.</p>
+				</div>
+			</div>
+			<div class="box-accordion__item js-accordion-item">
 				<div class="box-accordion__title js-accordion-trigger">★★★</div>
 				<div class="box-accordion__content js-accordion-content">
 					<h3 class="hdg-lv3">★★★</h3>
@@ -1724,6 +1893,7 @@
 				</div>
 			</div>
 		</div>
+		<p><a href="/practice/" class="btn btn-primary">Practice</a></p>
 	</div>
 	<footer class="footer">
 		<div class="wrp-container">
@@ -1734,7 +1904,7 @@
 	<script src="../resource/js/utilities.js"></script>
 	<script src="../resource/js/from-validator.js"></script>
 	<script src="../resource/js/from-validator-2.js"></script>
-	<script src="../resource/js/main.js"></script>
+	<script src="../resource/js/main.js" type="module"></script>
 	<!-- Mong muốn sử dụng lib validator như sau -->
 	<script>
 		// Form validate cách 1
@@ -1764,12 +1934,13 @@
 		// });
 
 		// Form validate cách 2
-		Validator2('#frm-login', {
-			onSubmit: function(data){
-				// Call API
-				console.log(data);
-			}
-		});
+		// submit với API/ajax
+		let form = new Validator2('#frm-login');
+		form.onSubmit = function(data){
+			console.log(data);
+		}
+		// submit với hành vi mặc định
+		// new Validator2('#frm-login');
 	</script>
 </body>
 </html>

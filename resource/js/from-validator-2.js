@@ -1,8 +1,7 @@
-function Validator2(formSelector, options){
-	// Gán giá trị mặc định cho tham số (ES5)
-	if(!options){
-		options = {};
-	}
+function Validator2(formSelector){
+	let _this = this;
+	let formRules = {};
+
 	function getParent(element, selector){
 		while(element.parentElement){
 			if(element.parentElement.matches(selector)){
@@ -11,8 +10,6 @@ function Validator2(formSelector, options){
 			element = element.parentElement;
 		}
 	}
-
-	let formRules = {};
 
 	/*
 	Quy ước tạo rule:
@@ -79,10 +76,10 @@ function Validator2(formSelector, options){
 			let rules = formRules[event.target.name];
 			let errorMessage;
 
-			rules.find(function(rule){
+			for(let rule of rules){
 				errorMessage = rule(event.target.value);
-				return errorMessage;
-			});
+				if(errorMessage) break;
+			}
 			
 			//Nếu có lỗi hiển thị `meassge` ra UI
 			if(errorMessage){
@@ -126,7 +123,7 @@ function Validator2(formSelector, options){
 
 		// Khi không có lỗi thì submit form `isValid === true`
 		if(isValid){
-			if(typeof options.onSubmit === 'function'){
+			if(typeof _this.onSubmit === 'function'){
 				let enableInputs = formElement.querySelectorAll('[name]:not([disabled])');
 				let formValues = Array.from(enableInputs).reduce(function(values, input){
 					switch(input.type){
@@ -153,7 +150,7 @@ function Validator2(formSelector, options){
 				}, {});
 
 				// Gọi lại hàm onSubmit và trả về giá trị của form
-				options.onSubmit(formValues);
+				_this.onSubmit(formValues);
 			}else{
 				formElement.submit();
 			}

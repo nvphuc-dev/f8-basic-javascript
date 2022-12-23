@@ -1316,3 +1316,212 @@ btn.addEventListener('click', viec2);
 setTimeout(function(){
 	btn.removeEventListener('click', viec1);
 }, 3000);
+
+
+// JSON (JavaScript Object Notation)
+// JSON: Number, String, Boolean, Null, Array, Object
+// Stringify: Từ Javascript types -> JSON
+// Parse: Từ JSON -> Javascript
+// let a = '1';
+// console.log(JSON.parse(a));
+
+// Promise
+// - Sync: đồng bộ // thèng nào viết trước chạy trước
+// - Async: bất đồng bộ // khi nào gọi thì chạy, hoặc thời gian nào đó sẽ dc gọi (setTimeout, setInterval, fetch, XMLHttpRequest, file reading, request animation frame)
+
+// Nỗi đâu
+// - Callback hell
+// - Pyramid of doom
+
+// Để tạo 1 promise
+// 1. new Promise
+// 2. excutor
+
+// Đối tượng Promise hỗ trợ hai thuộc tính: trạng thái và kết quả.
+// 1. pedding // Trong khi một đối tượng Promise đang "chờ xử lý" (đang hoạt động), kết quả là không xác định.
+// 2. fulfilled // Khi một đối tượng Promise được "hoàn thành", kết quả là một giá trị.
+// 3. rejected // Khi một đối tượng Promise bị "từ chối", kết quả là một đối tượng lỗi.
+// let promise = new Promise(
+// 	// excutor
+// 	function(resolve, reject){
+// 		// logic hiểu
+// 		// Khi nào thành công gọi tới resolve()
+// 		// Khi nào thất bại gọi tới reject()
+
+// 		// Ex: Fake call API
+// 		resolve([
+// 			{
+// 				id: 1,
+// 				name: 'Javascript'
+// 			}
+// 		]);
+// 		// reject('Có lỗi');
+// 	}
+// );
+
+// promise trả về 3 phương thức
+// promise.then(function(courses){
+// 	// Thành công vào then.
+// 	// console.log(courses);
+// }).catch(function(error){
+// 	// thất bại vào catch.
+// 	// console.log(error);
+// }).finally(function(){
+// 	// Khi thực hiện xong, thành công hay thất bại cũng vào đây.
+// 	// console.log('Done!');
+// });
+
+// FAQ: Bạn hiểu như thế nào Promise
+	// -> Promise (ES6) sinh ra để xử lý bất đồng bộ trong js, trước khi có promise thì sử dụng callback và xảy ra vấn đề là callback hell -> khó nhìn khó hiểu.
+	// để tạo ra promise xem ở trên...
+
+// Promise chain
+// let promise1 = new Promise(
+// 	function(resolve, reject){
+// 		resolve();
+// 	}
+// );
+// promise1.then(function(){
+// 	return 1;
+// }).then(function(value){
+// 	console.log(value);
+// 	return 2;
+// }).then(function(value){
+// 	console.log(value);
+// 	return 3;
+// }).then(function(value){
+// 	console.log(value);
+// }).catch(function(error){
+// 	console.log(error);
+// })
+
+// Ex: sau mỗi giây in ra 1, 2, 3
+// function sleep(ms){
+// 	return new Promise(function(resolve){
+// 		setTimeout(resolve, ms);
+// 	});
+// }
+
+// sleep(1000).then(function(){
+// 	console.log(1);
+// 	return sleep(1000);
+// }).then(function(){
+// 	console.log(2);
+// 	return sleep(1000);
+// }).then(function(){
+// 	console.log(3);
+// 	// return sleep(1000);
+// 	return new Promise(function(resolve, reject){
+// 		reject('Có lỗi');
+// 	})
+// }).then(function(){
+// 	console.log(4);
+// 	return sleep(1000);
+// }).catch(function(error){
+// 	console.log(error);
+// });
+
+// Promise methods (resolve, reject, all)
+// 1. Promise.resolve
+// 2. Promise.reject
+// 3. Promise.all
+
+// let promise3 = Promise.resolve('Success!');
+// let promise3 = Promise.reject('Error!');
+// promise3.then(function(result){
+// 	console.log('result: ', result);
+// }).catch(function(err){
+// 	console.log('error: ', err);
+// });
+
+// let promiseA = new Promise(function(resolve, reject){
+// 	setTimeout(function(){
+// 		resolve([1]);
+// 	}, 2000);
+// });
+// let promiseB = new Promise(function(resolve, reject){
+// 	setTimeout(function(){
+// 		resolve([2, 3]);
+// 	}, 5000);
+// });
+
+// Promise.all([promiseA, promiseB]).then(function(results){
+// 	let result1 = results[0];
+// 	let result2 = results[1];
+// 	console.log(result1.concat(result2));
+// });
+
+// Arrow function trong Javascript ES6 
+// const sum = (a, b) => ({a: a, b: a});
+// console.log(sum(2, 5));
+
+// Arrow function không thể tạo một `Contructor`
+// const Course = (name, price) => {
+// 	this.name = name;
+// 	this.price = price;
+// }
+// const jsCourse = new Course('PHP', 1000);
+// console.log(jsCourse); // error
+
+// Enhanced object literals trong javascript ES6
+// 1. Định nghĩa key: value cho object
+// 2. Định nghĩa method cho object
+// 1. Định nghĩa key cho object dưới dạng biến
+// let name = 'PHP';
+// let price = 500;
+// let course = {
+// 	name,
+// 	price,
+// 	getName(){
+// 		return name;
+// 	}
+// }
+// console.log(course.getName());
+
+// let fieldName = 'name';
+// let fieldName = 'new-name';
+// let fieldPrice = 'price';
+// const course = {
+// 	[fieldName]: 'Javascript',
+// 	[fieldPrice]: 500
+// }
+// console.log(course);
+
+//Default parameter values trong javascript ES6
+// function myFunction(x, y = 10) {
+// 	// y is 10 if not passed or undefined
+// 	return x + y;
+// }
+// myFunction(5); // will return 15
+
+// Destructuring trong javascript ES6
+// let array = ['Javascript', 'PHP', 'Ruby'];
+// // let [a, b, c] = array;
+// // console.log(a, b, c);
+
+// // Rest parameters // lấy ra các phần tử còn lại
+// let [a, ...rest] = array;
+// console.log(a);
+// console.log(rest);
+// Tương tự sử dụng cho object {}
+
+// Spread trong javascript ES6
+// in thứ tự array 2 trước array 1
+// let array1 = ['Javascript', 'PHP', 'Ruby'];
+// let array2 = ['React', 'Dart'];
+// let array3 = [...array2, ...array1];
+// console.log(array3);
+
+// Tagged template literals trong ES6 (ít người biết)
+// Ví dụ tạo mini thư viện giống React
+// function highlight([first, ...strings], ...value){
+// 	return value.reduce((acc, curr) => [...acc, `<span>${curr}</span>`, strings.shift()], [first]).join('');
+// }
+// let brand = 'F8';
+// let course = 'Javascript';
+// let html = highlight`Học lập trình ${course} tại ${brand}!`;
+// console.log(html);
+
+// Module: import/export
+import logger from './logger.js';
+logger('Test meassge...', 'warn');
