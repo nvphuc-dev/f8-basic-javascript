@@ -678,3 +678,32 @@ a:hover{
 }
 
 /* Ví dụ sử dụng Promise */
+.lst-post,
+.lst-comments,
+.lst-courses{
+	margin: 0;
+	padding: 0;
+}
+.lst-courses{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -10px;
+}
+.lst-courses li{
+	width: 50%;
+	padding: 0 10px;
+	margin-bottom: 20px;
+}
+.lst-courses__inner{
+	border: solid 1px #e6e6e6;
+	padding: 15px;
+	border-radius: 3px;
+}
+.lst-courses h4,
+.lst-courses p{
+	margin: 0;
+}
+.lst-courses p{
+	margin-top: 10px;
+	color: #666;
+}
