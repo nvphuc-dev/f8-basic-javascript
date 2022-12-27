@@ -492,6 +492,10 @@ a:hover{
 	background: #ff623d;
 	border-color: #ff623d;
 }
+.btn--sm{
+	font-size: 14px;
+	padding: 5px 10px;
+}
 @media(min-width: 768px){
 	.btn:hover{
 		background: transparent;
@@ -706,4 +710,12 @@ a:hover{
 .lst-courses p{
 	margin-top: 10px;
 	color: #666;
+}
+.lst-courses__actions{
+	display: flex;
+}
+
+.frm-create{
+	max-width: 500px;
+	margin: 0 auto;
 }
