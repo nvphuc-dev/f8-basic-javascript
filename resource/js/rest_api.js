@@ -75,6 +75,7 @@ function renderCourses(courses){
 					<p>${course.description}</p>
 					<p class="lst-courses__actions">
 						<span class="btn btn--sm btn--danger" onclick=handleDeleteCourse(${course.id})>Xóa</span>
+						<span class="btn btn--sm btn--info">Edit</span>
 					</p>
 				</div>
 			</li>

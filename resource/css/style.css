@@ -714,6 +714,14 @@ a:hover{
 .lst-courses__actions{
 	display: flex;
 }
+.lst-courses__actions .btn + .btn{
+	margin-left: 10px;
+}
+@media(max-width: 767px){
+	.lst-courses li{
+		width: 100%;
+	}
+}
 
 .frm-create{
 	max-width: 500px;
