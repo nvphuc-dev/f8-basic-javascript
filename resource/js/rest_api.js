@@ -1,17 +1,29 @@
 let courseApi = "http://localhost:3000/coures";
+let editFormData;
 
 function start(){
 	// getCourses(function(courses){
 	// 	renderCourses(courses);
 	// });
 	getCourses(renderCourses);
-	handleCreateForm();
 }
 
 start();
 
 
 // Functions
+function clearForm(){
+	document.querySelector('input[name="title"]').value = "";
+	document.querySelector('textarea[name="description"]').value = "";
+}
+
+function getFormData() {
+	return {
+		title: document.querySelector('input[name="title"]').value,
+		description: document.querySelector('textarea[name="description"]').value
+	}
+}
+
 function getCourses(callback){
 	fetch(courseApi).then(function(response){
 		return response.json();
@@ -50,19 +62,50 @@ function handleDeleteCourse(id){
 	});
 }
 
+function editCourseCall(id){
+	// Call get course details by id API
+	fetch(courseApi +'/?id=' + id, {
+		method: "GET"
+	}).then((res)=>res.json()).then((response)=>{
+		console.log("Edit info", response);
+		editFormData =  response[0];
+		setFormData(editFormData.title, editFormData.description);
+	});
+}
+
+function setFormData(title, description){
+	document.querySelector('input[name="title"]').value = title;
+	document.querySelector('textarea[name="description"]').value = description;
+}
+
+// callled this function when user click on button
+function submitForm() {
+	if(!editFormData) handleCreateForm(); // if the editFormData is undefined then call handleCreateForm()
+	else handleEditCourse();
+}
+
+function handleEditCourse(){
+	let formData = getFormData();
+	formData['id'] = editFormData.id; // get id from selected course
+	
+	fetch(courseApi, {
+		method: "POST",
+		headers: {
+			"Content-Type":"application/json"
+		},
+		body:JSON.stringify(formData)
+	}).then((res)=>res.json()).then((response)=>{
+		clearForm();
+		getData();
+	});
+}
+
 function handleCreateForm(){
-	let btn = document.querySelector('#create');
-	btn.onclick = function(){
-		let title = document.querySelector('input[name="title"]').value;
-		let description = document.querySelector('textarea[name="description"]').value;
-		let formData = {
-			title: title,
-			description: description
-		}
-		storeCourse(formData, function(){
-			getCourses(renderCourses);
-		});
-	}
+	let formData = getFormData();
+	storeCourse(formData, function(){
+		getCourses(renderCourses);
+		clearForm();
+	});
 }
 
 function renderCourses(courses){
@@ -75,7 +118,7 @@ function renderCourses(courses){
 					<p>${course.description}</p>
 					<p class="lst-courses__actions">
 						<span class="btn btn--sm btn--danger" onclick=handleDeleteCourse(${course.id})>Xóa</span>
-						<span class="btn btn--sm btn--info">Edit</span>
+						<span class="btn btn--sm btn--info" onclick=editCourseCall(${course.id})>Sửa</span>
 					</p>
 				</div>
 			</li>

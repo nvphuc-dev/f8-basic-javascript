@@ -24,6 +24,8 @@ Kiểm tra kiểu dữ liệu ta dùng "typeof" // console.log(typeof a);
  Logs:
  -------------------------------------------------- */
  https://www.youtube.com/watch?v=oYC6wGu-sWo&list=PL_-VfJajZj0VgpFpEVFzS5Z-lkXtBe-x5&index=111
+
+ Bài tập [/json_server/index.html] chưa sửa update được.
  
  
  
