@@ -8,3 +8,4 @@ Mở terminal thực hiện các bước sau:
     <!-- Bước start json server tùy chỉnh lại như sau: -->
     <!-- vào file package.json thêm ["start": "json-server --watch db.json",] -->
     <!-- Tại terminal dự án gọi start: [npm start] xong-->
+    - Start: [npm start]
