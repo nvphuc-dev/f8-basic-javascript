@@ -64,11 +64,11 @@ function handleDeleteCourse(id){
 
 function editCourseCall(id){
 	// Call get course details by id API
-	fetch(courseApi +'/?id=' + id, {
+	fetch(courseApi + '/' + id, {
 		method: "GET"
 	}).then((res)=>res.json()).then((response)=>{
-		console.log("Edit info", response);
-		editFormData =  response[0];
+		// console.log("Edit info", response);
+		editFormData = response;
 		setFormData(editFormData.title, editFormData.description);
 	});
 }
@@ -87,16 +87,16 @@ function submitForm() {
 function handleEditCourse(){
 	let formData = getFormData();
 	formData['id'] = editFormData.id; // get id from selected course
-	
-	fetch(courseApi, {
-		method: "POST",
+
+	fetch(courseApi + '/' + editFormData.id, {
+		method: "PUT",
 		headers: {
-			"Content-Type":"application/json"
+			"Content-Type": "application/json"
 		},
-		body:JSON.stringify(formData)
+		body: JSON.stringify(formData)
 	}).then((res)=>res.json()).then((response)=>{
 		clearForm();
-		getData();
+		getCourses(renderCourses);
 	});
 }
 

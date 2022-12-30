@@ -3,34 +3,32 @@
  -------------------------------------------------- */
 Kiểm tra kiểu dữ liệu ta dùng "typeof" // console.log(typeof a);
 
- 
- 
- 
- 
- 
+
+
+
+
+
  /* -----------------------------------------------
  Notes:
  -------------------------------------------------- */
  1. Cài đặt môi trường:
 	- Trình duyệt Google Chrome
 	- Visual Studio Code + Live server
- 
- 
- 
- 
- 
- 
+
+
+
+
+
+
  /* -----------------------------------------------
  Logs:
  -------------------------------------------------- */
- https://www.youtube.com/watch?v=oYC6wGu-sWo&list=PL_-VfJajZj0VgpFpEVFzS5Z-lkXtBe-x5&index=111
+ https://www.youtube.com/watch?v=TRjVXmk8q8I&list=PL_-VfJajZj0VgpFpEVFzS5Z-lkXtBe-x5&index=110
 
- Bài tập [/json_server/index.html] chưa sửa update được.
- 
- 
- 
- 
- 
- 
- 
- 
+
+
+
+
+
+
+
